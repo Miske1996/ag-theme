@@ -1,10 +1,26 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
-    "hero":{
-      "type": "hero"
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "hero_image": "shopify://shop_images/Group_6_1.png",
+        "hero_video": "shopify://files/videos/-f1d3-45a4-a2a8-c462f7e5812d.mp4",
+        "hero_title": "Great things never came from comfort zones.",
+        "hero_cta": "Shop Now",
+        "hero_cta-url": ""
+      }
     }
   },
   "order": [
-   "hero"
+    "hero"
   ]
 }
