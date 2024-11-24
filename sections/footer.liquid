@@ -19,11 +19,11 @@
             <input type="hidden" name="contact[tags]" value="newsletter">
             <div class="newsletter">
               <h5 class="newsletter__title">{{ block.settings.newsletter_title }}</h5>
-              <span class="newsletter__title">{{ block.settings.newsletter_subtitle }}</span>
+              <span class="newsletter__subtitle">{{ block.settings.newsletter_subtitle }}</span>
               <div class="newsletter__email">
                 <input
                   class="newsletter__input"
-                  type="email"
+                  type="text"
                   id="NewsletterForm--{{ section.id }}"
 
                   name="contact[email]"
@@ -95,7 +95,7 @@
     {% endfor %}
   </div>
   <div class="footer__copyrights">
-    <a class="footer__copyrights" href="uncmfrt.com">© uncmfrt.com. All right reserved.</a>
+    <a class="footer__copyright" href="https://uncmfrt.com">© uncmfrt.com. All right reserved.</a>
     <div class="footer__made-by">
       <span>Made with</span>
       <svg

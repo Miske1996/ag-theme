@@ -12,6 +12,9 @@ button{
 a{
     text-decoration: none;
 }
+input:focus{
+    outline: none;
+}
 .image--contain{
     object-fit: contain;
 }
