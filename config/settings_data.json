@@ -50,6 +50,42 @@
             "settings": {
               "menu": "legal"
             }
+          },
+          "support_block_AWGb4N": {
+            "type": "SupportBlock",
+            "settings": {
+              "support_title": "Contact Us",
+              "support_subtitle": "Let Us Help You",
+              "support_phone": "(888) 860-0572"
+            }
+          },
+          "social_media_block_twQynQ": {
+            "type": "SocialMediaBlock",
+            "settings": {
+              "image": "shopify://shop_images/twitter-ag.svg",
+              "url": "/"
+            }
+          },
+          "social_media_block_qkDMJe": {
+            "type": "SocialMediaBlock",
+            "settings": {
+              "image": "shopify://shop_images/insta-ag.svg",
+              "url": "/"
+            }
+          },
+          "social_media_block_tWyeM4": {
+            "type": "SocialMediaBlock",
+            "settings": {
+              "image": "shopify://shop_images/fb-ag.svg",
+              "url": "/"
+            }
+          },
+          "social_media_block_QGCUCP": {
+            "type": "SocialMediaBlock",
+            "settings": {
+              "image": "shopify://shop_images/youtube-ag.svg",
+              "url": "/"
+            }
           }
         },
         "block_order": [
@@ -57,7 +93,12 @@
           "menu_block_Gbb8L7",
           "menu_block_3Wenbd",
           "menu_block_3HF7q8",
-          "menu_block_4eB4fw"
+          "menu_block_4eB4fw",
+          "support_block_AWGb4N",
+          "social_media_block_twQynQ",
+          "social_media_block_qkDMJe",
+          "social_media_block_tWyeM4",
+          "social_media_block_QGCUCP"
         ],
         "settings": {}
       }
