@@ -2,19 +2,36 @@ body,*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-body{
     font-family: 'Rubik';
     font-weight: 500;
 }
-.page-width{
-    max-width: 1520px;
-    padding-left: 40px;
-    padding-right: 40px;
+button{
+    background: none;
+    border: none;
 }
 .image--contain{
     object-fit: contain;
 }
 .image--covers{
     object-fit: cover;
+}
+.button--primary {
+    border-radius: 8px;
+    height: 45px;
+    padding: 14px 24px;
+    color: #fff;
+    background-color: #1B1F23; 
+    font-size: 14px;
+    font-weight: 500 ;
+    cursor: pointer;
+}
+.button--secondary{
+    border-radius: 8px;
+    height: 45px;
+    padding: 14px 24px;
+    color: #1B1F23 ;
+    background-color:#fff ; 
+    font-size: 14px;
+    font-weight: 500 ;
+    cursor: pointer; 
 }

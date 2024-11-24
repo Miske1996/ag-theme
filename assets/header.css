@@ -1,0 +1,92 @@
+.header{
+    display: flex;
+    position: fixed;
+    top: 20px;
+    width: 100vw;
+    z-index: 10;
+    justify-content: center;
+    padding: 0 40px;
+}
+.header__wrapper{
+    display: flex;
+    border-radius: 8px;
+    height: 70px;
+    padding: 12px 24px;
+    background-color: #fff;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__logo-link{
+    width: 148px;
+}
+
+.header__navigation-container{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.header__search{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.header__navigation{
+    display: flex;
+    gap: 40px;
+}
+.header__nav-link{
+    color: #000;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16.59px;
+    text-decoration: none;
+}
+.header__nav-link:hover{
+    text-decoration: underline;
+}
+
+.header__cta-section{
+    display: flex;
+    gap: 5px;
+}
+.header__switch{
+    background-color:#E4E4E4 ;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    height: 45px;
+    gap: 10px;
+    cursor: pointer;
+}
+.header__switch span{
+    font-size: 14px;
+    color: #000;
+    font-weight: 500;
+    margin-left: 10px;
+}
+.header__switch-circle{
+    width: 33px;
+    height: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header__icon-man{
+    width: 100%;
+    height: 100%;
+}
+
+.header__links{
+    display: flex;
+    gap: 20px;
+    margin-left: 30px;
+    align-self: center;
+}
+
+.header__links svg{
+    width: 30px;
+    height: 30px;
+}

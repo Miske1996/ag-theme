@@ -1,10 +1,10 @@
 {
   "sections": {
-    "main":{
-      "type": "section-tmp"
+    "hero":{
+      "type": "hero"
     }
   },
   "order": [
-   "main"
+   "hero"
   ]
 }
