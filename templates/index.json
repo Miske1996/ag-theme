@@ -18,9 +18,13 @@
         "hero_cta": "Shop Now",
         "hero_cta-url": ""
       }
+    },
+    "InfiniteTextScroll":{
+      "type":"InfiniteTextScroll"
     }
   },
   "order": [
-    "hero"
+    "hero",
+    "InfiniteTextScroll"
   ]
 }
