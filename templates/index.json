@@ -19,12 +19,87 @@
         "hero_cta-url": ""
       }
     },
-    "InfiniteTextScroll":{
-      "type":"InfiniteTextScroll"
+    "InfiniteTextScroll": {
+      "type": "InfiniteTextScroll",
+      "blocks": {
+        "text_QMgEx9": {
+          "type": "Text",
+          "settings": {
+            "text": "High Quality Ingredients"
+          }
+        },
+        "text_YbQnKM": {
+          "type": "Text",
+          "settings": {
+            "text": "Independently Certified"
+          }
+        },
+        "text_A7EUXy": {
+          "type": "Text",
+          "settings": {
+            "text": "Expert Driven"
+          }
+        },
+        "text_P6wah4": {
+          "type": "Text",
+          "settings": {
+            "text": "Shipped Internationally"
+          }
+        },
+        "text_Y6cWae": {
+          "type": "Text",
+          "settings": {
+            "text": "High Quality Ingredients"
+          }
+        },
+        "text_3k4YgA": {
+          "type": "Text",
+          "settings": {
+            "text": "Independently Certified"
+          }
+        },
+        "text_Vzezei": {
+          "type": "Text",
+          "settings": {
+            "text": "Expert Driven"
+          }
+        },
+        "text_RPMQ9X": {
+          "type": "Text",
+          "settings": {
+            "text": "Shipped Internationally"
+          }
+        },
+        "text_Kc46Tq": {
+          "type": "Text",
+          "settings": {
+            "text": "High Quality Ingredients"
+          }
+        },
+        "text_h7i6aP": {
+          "type": "Text",
+          "settings": {
+            "text": "Independently Certified"
+          }
+        }
+      },
+      "block_order": [
+        "text_QMgEx9",
+        "text_YbQnKM",
+        "text_A7EUXy",
+        "text_P6wah4",
+        "text_Y6cWae",
+        "text_3k4YgA",
+        "text_Vzezei",
+        "text_RPMQ9X",
+        "text_Kc46Tq",
+        "text_h7i6aP"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "hero",
-    "InfiniteTextScroll" 
+    "InfiniteTextScroll"
   ]
 }
