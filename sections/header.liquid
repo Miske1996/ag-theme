@@ -1,0 +1,87 @@
+<link
+  rel="stylesheet"
+  href="{{ 'header.css' | asset_url }}"
+  media="print"
+  onload="this.media='all'; this.onload=null;"
+>
+<header class="header">
+  <a class="header__logo-link">
+    {{ section.settings.logo | image_url: width: 'auto' | image_tag: class: 'image--contain' }}
+  </a>
+  <div class="header__navigation-container">
+    <button class="header__search">
+        <svg
+            width="31"
+            height="30"
+            aria-hidden="false"
+            aria-label="Icon search"
+            class="header__icon-search"
+          >
+            <use xlink:href="#icon-sarch"></use>
+          </svg>
+    </button>  
+    <nav class="header__navigation">
+        {% for link in section.settings.header_menu.links %}
+            <a class="header__nav-link" href="{{ link.url }}">{{ link.title }}</a>
+        {% endfor %}
+    </nav>
+  </div>
+  <div class="header__cta-section">
+    <button class="header__switch">
+        <span>Men</span>
+        <div class="header__switch-circle">
+               <svg
+                width="33"
+                height="33"
+                aria-hidden="false"
+                aria-label="Icon man"
+                class="header__icon-man"
+              >
+                <use xlink:href="#icon-man"></use>
+              </svg>
+        </div>
+      </button>
+    <button class="header__cta">Take The Quiz</button>
+    <div class="header__links">
+        <a class="header__account" href="/">
+            <svg
+                width="30"
+                height="30"
+                aria-hidden="false"
+                aria-label="Icon account"
+                class="header__icon-account"
+              >
+                <use xlink:href="#icon-account"></use>
+              </svg>
+        </a>
+        <button class="header__addToCart" >
+            <svg
+                width="30"
+                height="30"
+                aria-hidden="false"
+                aria-label="Icon cart"
+                class="header__icon-cart"
+              >
+                <use xlink:href="#icon-cart"></use>
+              </svg>
+            </button>
+    </div>
+  </div>
+</header>
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Header logo"
+    },
+    {
+      "type": "link_list",
+      "id": "header_menu",
+      "label": "Header menu"
+    }
+  ]
+}
+{% endschema %}

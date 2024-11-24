@@ -1,0 +1,20 @@
+body,*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Rubik';
+    font-weight: 500;
+}
+.page-width{
+    max-width: 1520px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.image--contain{
+    object-fit: contain;
+}
+.image--covers{
+    object-fit: cover;
+}
