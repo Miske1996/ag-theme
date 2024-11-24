@@ -1,0 +1,195 @@
+<link
+  rel="stylesheet"
+  href="{{ 'footer.css' | asset_url }}"
+  media="print"
+  onload="this.media='all'; this.onload=null;"
+>
+{% assign has_social_media = false %}
+{% for block in section.blocks %}
+  {% if block.type == 'SocialMediaBlock' %}
+    {% assign has_social_media = true %}
+  {% endif %}
+{% endfor %}
+<footer class="footer">
+  <div class="footer__main">
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'Newsletter' %}
+          {% form 'customer', class: 'newsletter-form' %}
+            <input type="hidden" name="contact[tags]" value="newsletter">
+            <div class="newsletter">
+              <h5 class="newsletter__title">{{ block.settings.newsletter_title }}</h5>
+              <span class="newsletter__title">{{ block.settings.newsletter_subtitle }}</span>
+              <div class="newsletter__email">
+                <input
+                  class="newsletter__input"
+                  type="email"
+                  id="NewsletterForm--{{ section.id }}"
+
+                  name="contact[email]"
+                  value="{{ form.email }}"
+                  aria-required="true"
+                  autocorrect="off"
+                  autocapitalize="off"
+                  autocomplete="email"
+                  {% if form.errors %}
+                    autofocus
+                    aria-invalid="true"
+                    aria-describedby="Newsletter-error--{{ section.id }}"
+                  {% elsif form.posted_successfully? %}
+                    aria-describedby="Newsletter-success--{{ section.id }}"
+                  {% endif %}
+                  required
+                  placeholder="Email Address"
+                >
+                <button class="newsltter__button">Subscribe</button>
+              </div>
+            </div>
+          {% endform %}
+      {% endcase %}
+    {% endfor %}
+    <div class="footer__menus">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'MenuBlock' %}
+            <div class="footer__menu">
+              <h5 class="footer__menu-title">{{ block.settings.menu.title }}</h5>
+              <ul class="footer__menu-links">
+                {% for link in block.settings.menu.links %}
+                  <li class="footer__menu-link">
+                    <a href="{{ link.url }}">{{ link.title }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'SupportBlock' %}
+          <div class="footer__support">
+            <h5 class="footer__support-title">{{ block.settings.support_title }}</h5>
+            <div class="footer__support-content">
+              <span class="footer__support-subtitle">{{ block.settings.support_subtitle }}</span>
+              <span class="footer__support-phone">{{ block.settings.support_phone }}</span>
+            </div>
+            {% if has_social_media %}
+              <div class="footer__social-media">
+                <h5 class="footer__social-media-title">Connect With Us</h5>
+                <ul class="footer__social-media-list">
+                  {% for block in section.blocks %}
+                    {% if block.type == 'SocialMediaBlock' %}
+                      <li class="footer__social-link">
+                        <a href="{{ block.settings.url }}">
+                          {{ block.settings.image | image_url: width: 24 | image_tag: class: 'image--contain' }}
+                        </a>
+                      </li>
+                    {% endif %}
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
+          </div>
+      {% endcase %}
+    {% endfor %}
+  </div>
+  <div class="footer__copyrights">
+    <a class="footer__copyrights" href="uncmfrt.com">© uncmfrt.com. All right reserved.</a>
+    <div class="footer__made-by">
+      <span>Made with</span>
+      <svg
+        width="14"
+        height="14"
+        aria-hidden="false"
+      >
+        <use xlink:href="#icon-heart"></use>
+      </svg>
+      <span>and</span>
+      <svg
+        width="14"
+        height="14"
+        aria-hidden="false"
+      >
+        <use xlink:href="#icon-cup"></use>
+      </svg>
+      <span>by Arctic Grey</span>
+    </div>
+  </div>
+</footer>
+{% schema %}
+{
+  "name": "Footer",
+  "blocks": [
+    {
+      "type": "MenuBlock",
+      "name": "Footer menu",
+      "settings": [
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Footer menu"
+        }
+      ]
+    },
+    {
+      "type": "Newsletter",
+      "name": "Newsletter",
+      "settings": [
+        {
+          "type": "text",
+          "id": "newsletter_title",
+          "label": "Newsletter title",
+          "default": "Be a Part of Our Journey"
+        },
+        {
+          "type": "text",
+          "id": "newsletter_subtitle",
+          "label": "Newsltter subtitle",
+          "default": "Welcome to UNCMFRT. Sign up for exclusive content and we'll send you 10% off."
+        }
+      ]
+    },
+    {
+      "type": "SupportBlock",
+      "name": "Support",
+      "settings": [
+        {
+          "type": "text",
+          "id": "support_title",
+          "label": "Support title",
+          "default": "Contact Us"
+        },
+        {
+          "type": "text",
+          "id": "support_subtitle",
+          "label": "Support subtitle",
+          "default": "Let Us Help You"
+        },
+        {
+          "type": "text",
+          "id": "support_phone",
+          "label": "Support phone",
+          "default": "(888) 860-0572"
+        }
+      ]
+    },
+    {
+      "type": "SocialMediaBlock",
+      "name": "Social media",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Social media image"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Url"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

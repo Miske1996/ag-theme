@@ -12,13 +12,13 @@
       media="print"
       onload="this.media='all'; this.onload=null;"
     >
-      <title>
-        {{ page_title }}
-        {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
-        {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
-        {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
-      </title>
-  
+    <title>
+      {{ page_title }}
+      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+    </title>
+
     <svg style="display: none">
       <symbol id="icon-man" viewBox="0 0 33 33">
           <circle cx="16.5" cy="16.5" r="16.5" fill="white"/>
@@ -40,6 +40,19 @@
       <symbol id="icon-account" viewBox="0 0 30 30">
         <path xmlns="http://www.w3.org/2000/svg" d="M16.5 16.5C18.0625 16.5417 19.3542 17.0833 20.375 18.125C21.4167 19.1458 21.9583 20.4375 22 22C22 22.2917 21.9062 22.5312 21.7188 22.7188C21.5312 22.9062 21.2917 23 21 23H9C8.70833 23 8.46875 22.9062 8.28125 22.7188C8.09375 22.5312 8 22.2917 8 22C8.04167 20.4375 8.58333 19.1458 9.625 18.125C10.6458 17.0833 11.9375 16.5417 13.5 16.5H16.5ZM9.53125 21.5H20.4688C20.3229 20.5 19.8854 19.6667 19.1562 19C18.4271 18.3542 17.5417 18.0208 16.5 18H13.5C12.4583 18.0208 11.5729 18.3542 10.8438 19C10.1146 19.6667 9.67708 20.5 9.53125 21.5ZM15 15C13.875 14.9792 12.9271 14.5938 12.1562 13.8438C11.4062 13.0729 11.0208 12.125 11 11C11.0208 9.875 11.4062 8.92708 12.1562 8.15625C12.9271 7.40625 13.875 7.02083 15 7C16.125 7.02083 17.0729 7.40625 17.8438 8.15625C18.5938 8.92708 18.9792 9.875 19 11C18.9792 12.125 18.5938 13.0729 17.8438 13.8438C17.0729 14.5938 16.125 14.9792 15 15ZM15 8.5C14.2917 8.52083 13.6979 8.76042 13.2188 9.21875C12.7604 9.69792 12.5208 10.2917 12.5 11C12.5208 11.7083 12.7604 12.3021 13.2188 12.7812C13.6979 13.2396 14.2917 13.4792 15 13.5C15.7083 13.4792 16.3021 13.2396 16.7812 12.7812C17.2396 12.3021 17.4792 11.7083 17.5 11C17.4792 10.2917 17.2396 9.69792 16.7812 9.21875C16.3021 8.76042 15.7083 8.52083 15 8.5Z" fill="#0E0804"/>
       </symbol>
+      <symbol id="icon-heart" viewBox="0 0 14 14">
+        <path xmlns="http://www.w3.org/2000/svg" d="M11.7875 2.79465C11.4659 2.47074 11.0834 2.21359 10.662 2.038C10.2406 1.86241 9.78873 1.77183 9.33225 1.77148C8.46882 1.77163 7.63691 2.09598 7.00125 2.68032C6.36565 2.09588 5.53371 1.77151 4.67025 1.77148C4.21323 1.77196 3.76082 1.86281 3.33905 2.03881C2.91728 2.2148 2.53447 2.47247 2.21267 2.79698C0.840083 4.1754 0.840667 6.3314 2.21383 7.70398L7.00125 12.4914L11.7887 7.70398C13.1618 6.3314 13.1624 4.1754 11.7875 2.79465Z" fill="#1B1F23"/>
+      </symbol>
+      <symbol id="icon-cup" viewBox="0 0 14 14">
+          <g clip-path="url(#clip0_10435_4609)">
+          <path d="M2.91797 1.75H11.668C11.9774 1.75 12.2741 1.87292 12.4929 2.09171C12.7117 2.3105 12.8346 2.60725 12.8346 2.91667V4.66667C12.8346 4.97609 12.7117 5.27283 12.4929 5.49162C12.2741 5.71042 11.9774 5.83333 11.668 5.83333H10.5013V7.58333C10.5013 8.20217 10.2555 8.79566 9.81788 9.23325C9.3803 9.67083 8.78681 9.91667 8.16797 9.91667H4.66797C4.04913 9.91667 3.45564 9.67083 3.01805 9.23325C2.58047 8.79566 2.33464 8.20217 2.33464 7.58333V2.33333C2.33464 2.17862 2.39609 2.03025 2.50549 1.92085C2.61489 1.81146 2.76326 1.75 2.91797 1.75ZM10.5013 2.91667V4.66667H11.668V2.91667H10.5013ZM1.16797 11.0833H11.668V12.25H1.16797V11.0833Z" fill="#1B1F23"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_10435_4609">
+          <rect width="14" height="14" fill="white"/>
+          </clipPath>
+          </defs>
+      </symbol>
     </svg>
     {{ content_for_header }}
     <style>
@@ -49,7 +62,7 @@
         src: url('{{ "Rubik-Thin.ttf" | file_url }}') format("truetype");
         font-display: swap;
       }
-      
+
       @font-face {
         font-family: "Rubik";
         font-style: italic;
@@ -57,14 +70,14 @@
         src: url('{{ "Rubik-ThinItalic.ttf" | file_url }}') format("truetype");
         font-display: swap;
       }
-      
+
       @font-face {
         font-family: "Rubik";
         font-weight: 200;
         src: url('{{ "Rubik-ExtraLight.ttf" | file_url }}') format("truetype");
         font-display: swap;
       }
-      
+
       @font-face {
         font-family: "Rubik";
         font-style: italic;
@@ -72,14 +85,14 @@
         src: url('{{ "Rubik-ExtraLightItalic.ttf" | file_url }}') format("truetype");
         font-display: swap;
       }
-      
+
       @font-face {
         font-family: "Rubik";
         font-weight: 300;
         src: url('{{ "Rubik-Light.ttf" | file_url }}') format("truetype");
         font-display: swap;
       }
-      
+
       @font-face {
         font-family: "Rubik";
         font-style: italic;
@@ -87,14 +100,14 @@
         src: url('{{ "Rubik-LightItalic.ttf" | file_url }}') format("truetype");
         font-display: swap;
       }
-      
+
       @font-face {
         font-family: "Rubik";
         font-weight: 400;
         src: url('{{ "Rubik-Regular.ttf" | file_url }}') format("truetype");
         font-display: swap;
       }
-      
+
       @font-face {
         font-family: "Rubik";
         font-style: italic;
@@ -102,14 +115,14 @@
         src: url('{{ "Rubik-Italic.ttf" | file_url }}') format("truetype");
         font-display: swap;
       }
-      
+
       @font-face {
         font-family: "Rubik";
         font-weight: 500;
         src: url('{{ "Rubik-Medium.ttf" | file_url }}') format("truetype");
         font-display: swap;
       }
-      
+
       @font-face {
         font-family: "Rubik";
         font-style: italic;
@@ -117,14 +130,14 @@
         src: url('{{ "Rubik-MediumItalic.ttf" | file_url }}') format("truetype");
         font-display: swap;
       }
-      
+
       @font-face {
         font-family: "Rubik";
         font-weight: 600;
         src: url('{{ "Rubik-SemiBold.ttf" | file_url }}') format("truetype");
         font-display: swap;
       }
-      
+
       @font-face {
         font-family: "Rubik";
         font-style: italic;
@@ -132,14 +145,14 @@
         src: url('{{ "Rubik-SemiBoldItalic.ttf" | file_url }}') format("truetype");
         font-display: swap;
       }
-      
+
       @font-face {
         font-family: "Rubik";
         font-weight: 700;
         src: url('{{ "Rubik-Bold.ttf" | file_url }}') format("truetype");
         font-display: swap;
       }
-      
+
       @font-face {
         font-family: "Rubik";
         font-style: italic;
@@ -147,14 +160,14 @@
         src: url('{{ "Rubik-BoldItalic.ttf" | file_url }}') format("truetype");
         font-display: swap;
       }
-      
+
       @font-face {
         font-family: "Rubik";
         font-weight: 800;
         src: url('{{ "Rubik-ExtraBold.ttf" | file_url }}') format("truetype");
         font-display: swap;
       }
-      
+
       @font-face {
         font-family: "Rubik";
         font-style: italic;
@@ -162,14 +175,14 @@
         src: url('{{ "Rubik-ExtraBoldItalic.ttf" | file_url }}') format("truetype");
         font-display: swap;
       }
-      
+
       @font-face {
         font-family: "Rubik";
         font-weight: 900;
         src: url('{{ "Rubik-Black.ttf" | file_url }}') format("truetype");
         font-display: swap;
       }
-      
+
       @font-face {
         font-family: "Rubik";
         font-style: italic;
@@ -177,12 +190,13 @@
         src: url('{{ "Rubik-BlackItalic.ttf" | file_url }}') format("truetype");
         font-display: swap;
       }
-      
     </style>
   </head>
 
   <body>
     {% section 'header' %}
     {{ content_for_layout }}
+    {% section 'footer' %}
+
   </body>
 </html>
