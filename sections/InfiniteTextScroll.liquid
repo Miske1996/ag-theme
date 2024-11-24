@@ -1,0 +1,53 @@
+<link
+  rel="stylesheet"
+  href="{{ 'InfiniteTextScroll.css' | asset_url }}"
+  media="print"
+  onload="this.media='all'; this.onload=null;"
+>
+<div class="infinite-text-scroll">
+    {% for block in section.blocks %}
+        <div class="infinite-text-scroll__block">
+            <svg
+                width="31"
+                height="30"
+                aria-hidden="false"
+              >
+                <use xlink:href="#icon-star"></use>
+              </svg>
+            <span class="infinite-text-scroll__text">{% block.settings.text %}</span>
+            {% if forloop.last %}
+                <svg
+                    width="31"
+                    height="30"
+                    aria-hidden="false"
+                  >
+                    <use xlink:href="#icon-star"></use>
+                  </svg>
+            {% endif %}
+        </div>
+    {% endfor %}
+</div>
+{% schema %}
+{
+  "name": "Infite Scroll Text",
+  "blocks": [
+    {
+        "type": "Text",
+        "name": "Text block",
+        "settings": [
+            {
+                "type": "text",
+                "label": "Text",
+                "id": "text",
+                "default":"High Quality Ingredients"
+            }
+        ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Infite Scroll Text"
+    }
+  ]
+}
+{% endschema %}
