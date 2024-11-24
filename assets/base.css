@@ -9,6 +9,9 @@ button{
     background: none;
     border: none;
 }
+a{
+    text-decoration: none;
+}
 .image--contain{
     object-fit: contain;
 }
@@ -16,6 +19,7 @@ button{
     object-fit: cover;
 }
 .button--primary {
+    width: fit-content;
     border-radius: 8px;
     height: 45px;
     padding: 14px 24px;
@@ -26,6 +30,7 @@ button{
     cursor: pointer;
 }
 .button--secondary{
+    width: fit-content;
     border-radius: 8px;
     height: 45px;
     padding: 14px 24px;

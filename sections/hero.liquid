@@ -6,8 +6,10 @@
 >
 <div class="hero">
   {{ section.settings.hero_image | image_url: width: 2000 | image_tag: class: 'hero__image image--cover' }}
-  <video class="hero__video" src="{{ section.settings.hero_video }}"></video>
-  <div class="hero__content">
+  <div class="hero__video">
+  {{ section.settings.hero_video | video_tag: autoplay: true, loop: true, muted: true, controls: false  }}
+  </div>
+    <div class="hero__content">
     <h2 class="hero__title">{{ section.settings.hero_title }}</h2>
     <a href="{{ section.settings.hero_cta-url }}" class="button--secondary">{{ section.settings.hero_cta }}</a>
   </div>
@@ -15,7 +17,7 @@
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const heroImage = document.querySelector(".hero__image");
-    const heroVideo = document.querySelector(".hero__video");
+    const heroVideo = document.querySelector(".hero video");
   
     if (heroVideo) {
       // Ensure the video has no sound and autoplays
