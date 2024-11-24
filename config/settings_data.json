@@ -16,6 +16,50 @@
           "logo": "shopify://shop_images/logo-store.png",
           "header_menu": "home-menu"
         }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "newsletter_TK8V8V": {
+            "type": "Newsletter",
+            "settings": {
+              "newsletter_title": "Be a Part of Our Journey",
+              "newsletter_subtitle": "Welcome to UNCMFRT. Sign up for exclusive content and we'll send you 10% off."
+            }
+          },
+          "menu_block_Gbb8L7": {
+            "type": "MenuBlock",
+            "settings": {
+              "menu": "about-us"
+            }
+          },
+          "menu_block_3Wenbd": {
+            "type": "MenuBlock",
+            "settings": {
+              "menu": "support"
+            }
+          },
+          "menu_block_3HF7q8": {
+            "type": "MenuBlock",
+            "settings": {
+              "menu": "important-links"
+            }
+          },
+          "menu_block_4eB4fw": {
+            "type": "MenuBlock",
+            "settings": {
+              "menu": "legal"
+            }
+          }
+        },
+        "block_order": [
+          "newsletter_TK8V8V",
+          "menu_block_Gbb8L7",
+          "menu_block_3Wenbd",
+          "menu_block_3HF7q8",
+          "menu_block_4eB4fw"
+        ],
+        "settings": {}
       }
     },
     "content_for_index": []
