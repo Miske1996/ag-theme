@@ -1,25 +1,48 @@
-.infinite-text-scroll{
-    display: flex;
+.infinite-text-scroll {
+    width: 100%;
     height: 50px;
-    width: 100vw;
-    padding: 16px 0;
-    gap: 16px;
-    background-color: #000;
-}
-
-.infinite-text-scroll__block{
+    background-color: #111;
+    overflow: hidden;
     display: flex;
-    height: 100%;
+    align-items: center;
+    position: relative;
     gap: 16px;
-}
-.infinite-text-scroll__text{
+  }
+  
+  .infinite-text-scroll__content {
+    display: flex;
+    gap: 16px;
+    animation: marqueeAnimation 20s linear infinite; /* Infinite scrolling animation */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-shrink: 0;
+  }
+
+  .infinite-text-scroll:hover ul{
+    animation-play-state: paused;
+  }
+
+  .infinite-text-scroll__block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: auto;
+    height: 100%;
     font-size: 14px;
     color: #fff;
+    gap: 16px;
+  }
+  
+  .infinite-text-scroll__text {
     font-weight: 500;
-    line-height: 16px;
-}
-
-.infinite-text-scroll__block svg{
-    width: 16px;
-    height: 16px;
-}
+    font-size: 14px;
+    color: #fff;
+  }
+  
+  @keyframes marqueeAnimation {
+    to {transform: translateX(calc(-100% - 16px));}
+  }
+  
+  

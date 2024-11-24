@@ -1,32 +1,34 @@
 <link
-  rel="stylesheet"
-  href="{{ 'InfiniteTextScroll.css' | asset_url }}"
-  media="print"
-  onload="this.media='all'; this.onload=null;"
->
-<div class="infinite-text-scroll">
-    {% for block in section.blocks %}
-        <div class="infinite-text-scroll__block">
-            <svg
-                width="31"
-                height="30"
-                aria-hidden="false"
-              >
-                <use xlink:href="#icon-star"></use>
-              </svg>
-            <span class="infinite-text-scroll__text">{{ block.settings.text }}</span>
-            {% if forloop.last %}
-                <svg
-                    width="31"
-                    height="30"
-                    aria-hidden="false"
-                  >
-                    <use xlink:href="#icon-star"></use>
-                  </svg>
-            {% endif %}
-        </div>
-    {% endfor %}
-</div>
+    rel="stylesheet"
+    href="{{ 'InfiniteTextScroll.css' | asset_url }}"
+    media="print"
+    onload="this.media='all'; this.onload=null;"
+  >
+  
+  <div class="infinite-text-scroll">
+    <ul class="infinite-text-scroll__content">
+      {% for block in section.blocks %}
+        <li class="infinite-text-scroll__block">
+          <svg width="31" height="30" aria-hidden="false">
+            <use xlink:href="#icon-star"></use>
+          </svg>
+          <span class="infinite-text-scroll__text">{{ block.settings.text }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+    <ul class="infinite-text-scroll__content" aria-hidden="true">
+      {% for block in section.blocks %}
+        <li class="infinite-text-scroll__block">
+          <svg width="31" height="30" aria-hidden="false">
+            <use xlink:href="#icon-star"></use>
+          </svg>
+          <span class="infinite-text-scroll__text">{{ block.settings.text }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+
 {% schema %}
 {
   "name": "Infite Scroll Text",
