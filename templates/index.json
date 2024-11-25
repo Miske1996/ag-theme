@@ -96,10 +96,14 @@
         "text_h7i6aP"
       ],
       "settings": {}
+    },
+    "ourClients":{
+      "type": "ourClients"
     }
   },
   "order": [
     "hero",
-    "InfiniteTextScroll"
+    "InfiniteTextScroll",
+    "ourClients"
   ]
 }
