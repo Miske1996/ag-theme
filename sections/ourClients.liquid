@@ -1,0 +1,74 @@
+<link
+    rel="stylesheet"
+    href="{{ 'ourClients.css' | asset_url }}"
+    media="print"
+    onload="this.media='all'; this.onload=null;"
+  >
+<div class="our-clients">
+    <div class="our-clients__reviews">
+        <span class="our-clients__recommendation">
+            {{ section.settings.recommendation_text }}
+        </span>
+        <div class="our-clients__stars">
+            <div class="our-clients__stars-icons">
+                {% for i in (1..section.settings.stars_number)  %}
+                    <svg width="20" height="20" aria-hidden="false" aria-label="star review">
+                        <use xlink:href="#icon-star-review"></use>
+                    </svg>
+                {% endfor %}
+            </div>
+            <span class="our-clients__reviews-text">
+                {{ section.settings.reviews_text }} {{ section.settings.stars_number }}-star Reviews
+            </span>
+        </div>
+    </div>
+    <div class="our-clients__seperator"></div>
+    <ul class="our-clients__list">
+        {% for block in section.blocks %}
+            {{ block.settings.brand | image_url: width: 700 | image_tag: class: 'our-clients__image image--contain' }}
+        {% endfor %}
+    </ul>
+</div>
+{% schema %}
+{
+  "name": "Our clients",
+  "settings": [
+    {
+        "type": "text",
+        "id": "recommendation_text",
+        "label": "Recommendation text",
+        "default": "#1 Doctor Recommended"
+    },
+    {
+        "type": "text",
+        "id": "reviews_text",
+        "label": "reviews text",
+        "default": "12,000+ "
+    },
+    {
+        "type": "number",
+        "id": "stars_number",
+        "label": "Stars count",
+        "default": 5
+    }
+  ],
+  "blocks": [
+    {
+        "type": "Brand",
+        "name": "Brand",
+        "settings": [
+            {
+                "type": "image_picker",
+                "label": "Brand logo",
+                "id": "brand"
+            }
+        ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Our clients"
+    }
+  ]
+}
+{% endschema %}
