@@ -165,8 +165,67 @@
         "stars_number": 5
       }
     },
-    "cardsLinksSection":{
-      "type":"cardsLinksSection"
+    "cardsLinksSection": {
+      "type": "cardsLinksSection",
+      "blocks": {
+        "card_KU9eRp": {
+          "type": "Card",
+          "settings": {
+            "card_image": "shopify://shop_images/Image.png",
+            "card_title": "Sleep",
+            "card_subtitle": "Optimize your sleep patterns. ",
+            "url": "/"
+          }
+        },
+        "card_aMbwiy": {
+          "type": "Card",
+          "settings": {
+            "card_image": "shopify://shop_images/Image_1.png",
+            "card_title": "Cognitive Function",
+            "card_subtitle": "Enhance your brain's performance and connectivity",
+            "url": "/"
+          }
+        },
+        "card_UgNL6R": {
+          "type": "Card",
+          "settings": {
+            "card_image": "shopify://shop_images/Image_4.png",
+            "card_title": "Foundational Health",
+            "card_subtitle": "Promoting healthy, natural deep sleep day to day",
+            "url": "/"
+          }
+        },
+        "card_A7rQT7": {
+          "type": "Card",
+          "settings": {
+            "card_image": "shopify://shop_images/Image_2.png",
+            "card_title": "Athletic Performance",
+            "card_subtitle": "Increase your healthy tissue, muscle, and energy",
+            "url": "/"
+          }
+        },
+        "card_bJUjRz": {
+          "type": "Card",
+          "settings": {
+            "card_image": "shopify://shop_images/Image_3.png",
+            "card_title": "Hormone Support",
+            "card_subtitle": "Boost your mood, libido, and vitality",
+            "url": "/"
+          }
+        }
+      },
+      "block_order": [
+        "card_KU9eRp",
+        "card_aMbwiy",
+        "card_UgNL6R",
+        "card_A7rQT7",
+        "card_bJUjRz"
+      ],
+      "settings": {
+        "header_1": "COMFORTABLY UNCOMFORTABLE",
+        "header_2": "Start with your Goals",
+        "header_3": "We cannot become what we want to be by remaining what we are."
+      }
     }
   },
   "order": [
