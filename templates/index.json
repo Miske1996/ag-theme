@@ -97,8 +97,73 @@
       ],
       "settings": {}
     },
-    "ourClients":{
-      "type": "ourClients"
+    "ourClients": {
+      "type": "ourClients",
+      "blocks": {
+        "brand_7j9DAE": {
+          "type": "Brand",
+          "settings": {
+            "brand": "shopify://shop_images/Group_10.png"
+          }
+        },
+        "brand_xNAfz8": {
+          "type": "Brand",
+          "settings": {
+            "brand": "shopify://shop_images/Group_9_1.png"
+          }
+        },
+        "brand_Yj3xEH": {
+          "type": "Brand",
+          "settings": {
+            "brand": "shopify://shop_images/Group_14.png"
+          }
+        },
+        "brand_T3kjj7": {
+          "type": "Brand",
+          "settings": {
+            "brand": "shopify://shop_images/Group_12.png"
+          }
+        },
+        "brand_8TDN4R": {
+          "type": "Brand",
+          "settings": {
+            "brand": "shopify://shop_images/Group_13.png"
+          }
+        },
+        "brand_mzppLL": {
+          "type": "Brand",
+          "settings": {
+            "brand": "shopify://shop_images/Group_9_1.png"
+          }
+        },
+        "brand_GGABCr": {
+          "type": "Brand",
+          "settings": {
+            "brand": "shopify://shop_images/Group_13.png"
+          }
+        },
+        "brand_7zgRmH": {
+          "type": "Brand",
+          "settings": {
+            "brand": "shopify://shop_images/Group_11.png"
+          }
+        }
+      },
+      "block_order": [
+        "brand_7j9DAE",
+        "brand_xNAfz8",
+        "brand_Yj3xEH",
+        "brand_T3kjj7",
+        "brand_8TDN4R",
+        "brand_mzppLL",
+        "brand_GGABCr",
+        "brand_7zgRmH"
+      ],
+      "settings": {
+        "recommendation_text": "#1 Doctor Recommended",
+        "reviews_text": "12,000+",
+        "stars_number": 5
+      }
     }
   },
   "order": [
