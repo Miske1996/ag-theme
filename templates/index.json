@@ -164,11 +164,15 @@
         "reviews_text": "12,000+",
         "stars_number": 5
       }
+    },
+    "cardsLinksSection":{
+      "type":"cardsLinksSection"
     }
   },
   "order": [
     "hero",
     "InfiniteTextScroll",
-    "ourClients"
+    "ourClients",
+    "cardsLinksSection"
   ]
 }

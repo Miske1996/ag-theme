@@ -1,0 +1,66 @@
+<link
+  rel="stylesheet"
+  href="{{ 'cardsLinksSection.css' | asset_url }}"
+  media="print"
+  onload="this.media='all'; this.onload=null;"
+>
+{% schema %}
+{
+  "name": "Cards with links",
+  "settings": [
+    {
+      "type": "text",
+      "id": "header_1",
+      "label": "Header top",
+      "default": "COMFORTABLY UNCOMFORTABLE"
+    },
+    {
+      "type": "text",
+      "id": "header_2",
+      "label": "Header middle",
+      "default": "Start with your Goals"
+    },
+    {
+      "type": "text",
+      "id": "header_3",
+      "label": "Header bottom",
+      "default": "We cannot become what we want to be by remaining what we are."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "Card",
+      "name": "Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "Card image",
+          "id": "card_image"
+        },
+        {
+          "type": "text",
+          "label": "Card title",
+          "id": "card_title",
+          "default": "Cognitive Function"
+        },
+        {
+          "type": "text",
+          "label": "Card subtitle",
+          "id": "card_subtitle",
+          "default": "Enhance your brain's performance and connectivity"
+        },
+        {
+            "type": "url",
+            "label": "Url",
+            "id": "url"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Cards with links"
+    }
+  ]
+}
+{% endschema %}
