@@ -234,8 +234,12 @@
         "collection": "supplements"
       }
     },
-    "collectionVideosSwiper":{
-      "type":"collectionVideosSwiper"
+    "collectionVideosSwiper": {
+      "type": "collectionVideosSwiper",
+      "settings": {
+        "heading": "Trusted & Proven by Science",
+        "collection": "real-people-real-results"
+      }
     }
   },
   "order": [
