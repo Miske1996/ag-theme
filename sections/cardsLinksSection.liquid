@@ -4,6 +4,22 @@
   media="print"
   onload="this.media='all'; this.onload=null;"
 >
+<section class="cards-links">
+    <div class="cards-links__headings">
+        <h1 class="cards-links__h1">
+            {{ section.settings.header_1 }}
+        </h1>
+        <div class="cards-links__subheadings">
+            <h2 class="cards-links__h2">{{ section.settings.header_2 }}</h2>
+            <h3 class="cards-links__h3">{{ section.settings.header_3 }}</h3>
+        </div>
+    </div>
+    <ul class="cards-links__cards">
+        {% for block in section.blocks %}
+          {% render 'cardLink', block: block %}
+        {% endfor %}
+    </ul>
+</section>
 {% schema %}
 {
   "name": "Cards with links",

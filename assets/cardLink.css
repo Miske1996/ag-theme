@@ -1,0 +1,48 @@
+.card-link{
+    display: flex;
+    flex: 1;
+}
+.card-link__link{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.card-link__image-container{
+    width: 100%;
+    aspect-ratio: 288/392;
+    border-radius: 8px;
+    display: flex;
+    overflow: hidden;
+}
+.card-link__image{
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.card-link__image-container:hover .card-link__image{
+    transform: scale(1.05);
+}
+.card-link__info{
+    display: flex;
+}
+.card-link__info-col{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 8px;
+}
+.card-link__title{
+    font-size: 18px;
+    font-weight: 600;
+    color: #1B1F23;
+}
+.card-link__subtitle{
+    font-size: 16px;
+    font-weight: 400;
+    color: #1B1F23CC;
+}
+.card-link svg{
+    width: 37px;
+    height: 37px;
+}

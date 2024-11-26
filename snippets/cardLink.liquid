@@ -1,0 +1,25 @@
+{% comment %}
+  block
+{% endcomment %}
+<link
+  rel="stylesheet"
+  href="{{ 'cardLink.css' | asset_url }}"
+  media="print"
+  onload="this.media='all'; this.onload=null;"
+>
+<li class="card-link">
+  <a href="{{ block.settings.url }}" class="card-link__link">
+    <div class="card-link__image-container">
+        {{ block.settings.card_image | image_url: width: 1000 | image_tag: class: 'card-link__image image--cover' }}
+    </div>
+    <div class="card-link__info">
+      <div class="card-link__info-col">
+        <h5 class="card-link__title">{{ block.settings.card_title }}</h5>
+        <h6 class="card-link__subtitle">{{ block.settings.card_subtitle }}</h6>
+      </div>
+      <svg width="37" height="37" aria-hidden="false" aria-label="icon go to link">
+        <use xlink:href="#icon-link-goto"></use>
+      </svg>
+    </div>
+  </a>
+</li>
