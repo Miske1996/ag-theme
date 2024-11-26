@@ -14,11 +14,16 @@
 .collection-swiper-header__prev::after {
   content: "" !important;
 }
+.collection-swiper-header__prev svg, .collection-swiper-header__next svg{
+    fill: none;
+}
 .collection-swiper-header__prev.swiper-button-prev,.collection-swiper-header__next.swiper-button-next{
     width: 40px;
     height: 40px;
     display: flex;
     cursor: pointer;
+    position: unset;
+    z-index: 1;
 }
 .collection-swiper-header__text{
     display: flex;

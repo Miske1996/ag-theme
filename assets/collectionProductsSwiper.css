@@ -7,3 +7,7 @@
     gap: 50px;
     background-color: #F6F6F5;
 }
+.collection-products-swiper__products{
+    display: flex;
+    width: 100%;
+}

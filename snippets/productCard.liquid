@@ -1,0 +1,96 @@
+{% comment %}
+  product,
+  class
+{% endcomment %}
+{% assign fixed_tag = 'Bestseller' %}
+<product-card class="{{ class }}">
+<li class="product-card">
+  <button class="product-card__link">
+    <div class="product-card__image-container">
+      {{ product.featured_image | image_url: width: 500 | image_tag: class: 'product-card__image image--contain' }}
+      {% for tag in product.tags %}
+        {% if tag == fixed_tag %}
+          <span class="product-card__fixed-tag">{{ tag }}</span>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="product-card__body">
+      <div class="product-card__tags">
+        {% for tag in product.tags %}
+          {% if tag != fixed_tag %}
+            <div class="product-card__tag">
+              <div class="product-card__tag-bullet"></div>
+              <span class="product-card__tag-text">{{ tag }}</span>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="product-card__info">
+        <div class="product-card__info-title">
+          <h5 class="product-card__title">{{ product.title }}</h5>
+          <h6 class="product-card__subtitle">{{ product.metafields.custom.subtitle }}</h6>
+        </div>
+        <div class="product-card__info-atc">
+          <div class="product-card__stars">
+            <svg width="12" height="12" aria-hidden="false">
+              <use xlink:href="#icon-star-review-product"></use>
+            </svg>
+            <svg width="12" height="12" aria-hidden="false">
+              <use xlink:href="#icon-star-review-product"></use>
+            </svg>
+            <svg width="12" height="12" aria-hidden="false">
+              <use xlink:href="#icon-star-review-product"></use>
+            </svg>
+            <svg width="12" height="12" aria-hidden="false">
+              <use xlink:href="#icon-star-review-product"></use>
+            </svg>
+            <svg width="12" height="12" aria-hidden="false">
+              <use xlink:href="#icon-star-review-product"></use>
+            </svg>
+          </div>
+          <span class="product-card__atc">Add • {{ product.price | money }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="product-card__menu">
+      <div class="product-card__subscriptions-info">
+        <div class="product-card__subscriptions">
+          <label for="subscription-1-{{ product.id }}" class="product-card__subscription">
+            <input
+              checked
+              class="product-card__input-radio"
+              id="subscription-1-{{ product.id }}"
+              type="radio"
+              name="subscription-{{ product.id }}"
+            >
+            <div class="product-card__custom-radio">
+              <div class="product-card__inner-circle"></div>
+            </div>
+            <div class="product-card__subscription-details">
+              <span class="product-card__subscription-text">One-Time Purchase</span>
+              <span class="product-card__subscription-price">{{ product.price | money }}</span>
+            </div>
+          </label>
+          <label for="subscription-2-{{ product.id }}" class="product-card__subscription">
+            <input
+              class="product-card__input-radio"
+              id="subscription-2-{{ product.id }}"
+              type="radio"
+              name="subscription-{{ product.id }}"
+            >
+            <div class="product-card__custom-radio">
+              <div class="product-card__inner-circle"></div>
+            </div>
+            <div class="product-card__subscription-details">
+              <span class="product-card__subscription-text">One-Time Purchase</span>
+              <span class="product-card__subscription-price">{{ product.price | money }}</span>
+            </div>
+          </label>
+        </div>
+        <span class="product-card__quick-atc button--primary">Add to Cart - {{ product.price | money }}</span>
+      </div> 
+      <span class="product-card__view-details">View Full Details</span>
+    </div>
+  </button>
+</li>
+</product-card>
