@@ -1,0 +1,50 @@
+<link
+  rel="stylesheet"
+  href="{{ 'collectionVideosSwiper.css' | asset_url }}"
+  media="print"
+  onload="this.media='all'; this.onload=null;"
+>
+<link
+    rel="stylesheet"
+    href="{{ 'productCard.css' | asset_url }}"
+    media="print"
+    onload="this.media='all'; this.onload=null;"
+    >
+<collection-videos-swiper>
+  <section class="collection-videos-swiper">
+    {% render 'collectionSwiperHeader', collection: section.settings.collection, header: section.settings.heading %}
+    <div class="collection-videos-swiper__products swiper">
+      <ul class="collection-videos-swiper__wrapper swiper-wrapper">
+        {% for product in section.settings.collection.products %}
+          {% render 'productCard', product: product, class: 'swiper-slide' %}
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+</collection-videos-swiper>
+<script src="{{ "collectionVideosSwiper.js" | asset_url }}" defer></script>
+<script src="{{ "ProductVideoCard.js" | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "Collection videos swiper",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Title heading",
+      "default": "Trusted & Proven by Science"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection videos swiper"
+    }
+  ]
+}
+{% endschema %}

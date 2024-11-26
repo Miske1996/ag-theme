@@ -1,0 +1,30 @@
+{% comment %}
+  product,
+  class
+{% endcomment %}
+<product-video-card class="{{ class }}">
+<li class="product-video-card">
+  <div class="product-video-card__video-container">
+    {% for media in product.media %}
+      {% if media.media_type == 'video' %}
+        {{ section.settings.hero_video | video_tag: autoplay: true, loop: true, muted: true, controls: false  }}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+  </div>
+  <button class="product-video-card__footer">
+    <div class="product-video-card__image-wrapper">
+      {{ product.featured_image | image_url: width: 300 | image_tag: class: 'product-video-card__image image--contain' }}
+    </div>
+    <div class="product-video-card__info">
+      <span class="product-video-card__title">{{ product.title }}</span>
+      <span class="product-video-card__price">{{ product.price | money }}</span>
+    </div>
+    <span class="product-video-card__quick-add">
+      <svg width="32" height="32" aria-hidden="false">
+        <use xlink:href="#iicon-quick-add"></use>
+      </svg>
+    </span>
+  </button>
+</li>
+</product-video-card>

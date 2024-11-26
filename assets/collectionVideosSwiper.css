@@ -1,0 +1,13 @@
+.collection-videos-swiper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px 0;
+    gap: 56px;
+    background-color: #F6F6F5;
+}
+.collection-videos-swiper__products{
+    display: flex;
+    width: 100%;
+}

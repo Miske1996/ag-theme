@@ -233,6 +233,9 @@
         "heading": "🌟 Trending",
         "collection": "supplements"
       }
+    },
+    "collectionVideosSwiper":{
+      "type":"collectionVideosSwiper"
     }
   },
   "order": [
@@ -240,6 +243,7 @@
     "InfiniteTextScroll",
     "ourClients",
     "cardsLinksSection",
-    "collectionProductsSwiper"
+    "collectionProductsSwiper",
+    "collectionVideosSwiper"
   ]
 }
