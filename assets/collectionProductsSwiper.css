@@ -1,0 +1,9 @@
+.collection-products-swiper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px 40px;
+    gap: 50px;
+    background-color: #F6F6F5;
+}

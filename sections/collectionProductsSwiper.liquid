@@ -1,0 +1,33 @@
+<link
+    rel="stylesheet"
+    href="{{ 'collectionProductsSwiper.css' | asset_url }}"
+    media="print"
+    onload="this.media='all'; this.onload=null;"
+  >
+    <section class="collection-products-swiper">
+        {% render 'collectionSwiperHeader', collection: section.settings.collection, header: section.settings.heading %}
+    </section>
+    {% schema %}
+    {
+      "name": "Collection swiper",
+      "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Title heading",
+            "default": "🌟 Trending"
+        },
+        {
+            "type": "collection",
+            "id": "collection",
+            "label": "Collection"
+        }
+      ],
+      "presets": [
+        {
+          "name": "Collection swiper"
+        }
+      ]
+    }
+{% endschema %}
+    

@@ -226,12 +226,16 @@
         "header_2": "Start with your Goals",
         "header_3": "We cannot become what we want to be by remaining what we are."
       }
+    },
+    "collectionProductsSwiper":{
+      "type":"collectionProductsSwiper"
     }
   },
   "order": [
     "hero",
     "InfiniteTextScroll",
     "ourClients",
-    "cardsLinksSection"
+    "cardsLinksSection",
+    "collectionProductsSwiper"
   ]
 }
