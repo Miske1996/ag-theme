@@ -14,10 +14,10 @@ if (!customElements.get("collection-videos-swiper")) {
          // eslint-disable-next-line no-undef
          this.swiper = new Swiper(this.querySelector(".collection-videos-swiper__products"), {
           slidesPerView: "auto",
-          spaceBetween: 10,
+          spaceBetween: 10, 
           navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".collection-videos-swiper__swiper-button-next",
+            prevEl: ".collection-videos-swiper__swiper-button-prev",
           },
         });
       }

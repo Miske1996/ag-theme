@@ -6,13 +6,13 @@
 >
 <link
     rel="stylesheet"
-    href="{{ 'productCard.css' | asset_url }}"
+    href="{{ 'productVideoCard.css' | asset_url }}"
     media="print"
     onload="this.media='all'; this.onload=null;"
     >
 <collection-products-swiper>
   <section class="collection-products-swiper">
-    {% render 'collectionSwiperHeader', collection: section.settings.collection, header: section.settings.heading %}
+    {% render 'collectionSwiperHeader', collection: section.settings.collection, header: section.settings.heading, buttons_class:"collection-products-swiper" %}
     <div class="collection-products-swiper__products swiper">
       <ul class="collection-products-swiper__wrapper swiper-wrapper">
         {% for product in section.settings.collection.products %}

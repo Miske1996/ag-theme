@@ -1,6 +1,7 @@
 product-video-card{
     height: 100%;
     display: flex;
+    width: fit-content !important;
 }
 .product-video-card{
     width: 300px;
@@ -13,6 +14,7 @@ product-video-card{
     height: 420px;
     overflow: hidden;
     position: relative;
+    border-radius: 8px;
 }
 .product-video-card__video-container video {
     /* Make video to at least 100% wide and tall */
@@ -45,6 +47,8 @@ product-video-card{
     align-items: center;
     background-color: #F6F6F5;
     border-radius: 4px;
+    width: 70px;
+    height: 70px;
   }
   .product-video-card__image{
     width: 50px;
@@ -60,14 +64,17 @@ product-video-card{
     font-size: 13px;
     font-weight: 400;
     color: #1B1F23;
+    text-align: left;
   }
   .product-video-card__price{
     font-size: 12px;
     font-weight: 500;
     color: #1B1F23;
+    text-align: left;
   }
   .product-video-card__quick-add{
     display: flex;
     width: 32px;
     height: 32px;
+    margin-left: auto;
   }

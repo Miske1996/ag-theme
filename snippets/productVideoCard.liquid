@@ -7,7 +7,7 @@
   <div class="product-video-card__video-container">
     {% for media in product.media %}
       {% if media.media_type == 'video' %}
-        {{ section.settings.hero_video | video_tag: autoplay: true, loop: true, muted: true, controls: false  }}
+        {{ media | video_tag: autoplay: true, loop: true, muted: true, controls: false  }}
         {% break %}
       {% endif %}
     {% endfor %}
@@ -22,7 +22,7 @@
     </div>
     <span class="product-video-card__quick-add">
       <svg width="32" height="32" aria-hidden="false">
-        <use xlink:href="#iicon-quick-add"></use>
+        <use xlink:href="#icon-quick-add"></use>
       </svg>
     </span>
   </button>

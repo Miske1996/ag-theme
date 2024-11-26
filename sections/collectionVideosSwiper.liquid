@@ -12,11 +12,14 @@
     >
 <collection-videos-swiper>
   <section class="collection-videos-swiper">
-    {% render 'collectionSwiperHeader', collection: section.settings.collection, header: section.settings.heading %}
+    {% render 'collectionSwiperHeader', collection: section.settings.collection, header: section.settings.heading, buttons_class:"collection-videos-swiper" %}
     <div class="collection-videos-swiper__products swiper">
       <ul class="collection-videos-swiper__wrapper swiper-wrapper">
         {% for product in section.settings.collection.products %}
-          {% render 'productCard', product: product, class: 'swiper-slide' %}
+          {% render 'productVideoCard', product: product, class: 'swiper-slide' %}
+        {% endfor %}
+        {% for product in section.settings.collection.products %}
+          {% render 'productVideoCard', product: product, class: 'swiper-slide' %}
         {% endfor %}
       </ul>
     </div>

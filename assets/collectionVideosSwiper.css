@@ -10,4 +10,5 @@
 .collection-videos-swiper__products{
     display: flex;
     width: 100%;
+    list-style-type: none;
 }
