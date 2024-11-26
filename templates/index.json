@@ -227,8 +227,12 @@
         "header_3": "We cannot become what we want to be by remaining what we are."
       }
     },
-    "collectionProductsSwiper":{
-      "type":"collectionProductsSwiper"
+    "collectionProductsSwiper": {
+      "type": "collectionProductsSwiper",
+      "settings": {
+        "heading": "🌟 Trending",
+        "collection": "supplements"
+      }
     }
   },
   "order": [
