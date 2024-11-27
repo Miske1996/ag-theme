@@ -1,6 +1,19 @@
 {{ 'bannerImage.css' | asset_url | stylesheet_tag }}
 <section class="banner-image">
-
+    <div class="banner-image__wrapper">
+        {{ section.settings.banner_image | image_url: width: 2000 | image_tag: class: 'banner-image__image image--cover' }}
+        <div class="banner-image__content">
+            <div class="banner-image__title">
+                <h2 class="banner-image__h2" style="--color-text:{{ section.settings.text_color }}">{{ section.settings.title }}</h2>
+                <h3 class="banner-image__h3" style="--color-text:{{ section.settings.text_color }}">{{ section.settings.subtitle }}</h3>
+            </div>
+            <div class="banner-image__buttons">
+                {% for block in section.blocks %}
+                    <button class="banner-image__button" style="--border-color:{{  block.settings.border_color }};--bg-color:{{ block.settings.bg_color }};--color-text:{{ block.settings.text_color }};">{{ block.settings.text }}</button>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 </section>
 {% schema %}
 {
