@@ -309,7 +309,7 @@
           "type": "Button",
           "settings": {
             "text": "Take The Plunge",
-            "border_color": "#ffffff",
+            "border_color": "rgba(0,0,0,0)",
             "bg_color": "#ffffff",
             "text_color": "#1B1F23"
           }
@@ -320,7 +320,7 @@
             "text": "Dive Deeper",
             "border_color": "#ffffff",
             "bg_color": "rgba(0,0,0,0)",
-            "text_color": "rgba(0,0,0,0)"
+            "text_color": "#ffffff"
           }
         }
       },
