@@ -1,6 +1,15 @@
 {{ 'socialMedia.css' | asset_url | stylesheet_tag }}
 <section class="social-media">
-
+    <div class="social-media__info">
+        <div class="social-media__info-header">
+            {{ section.settings.brand_logo | image_url: width: 200 | image_tag: class: 'social-media__info-logo image--contain' }}
+            <span class="social-media__username"><span>@</span>{{ section.settings.social_username }}</span>
+        </div>
+        <a href="{{ section.settings.social_url }}" class="social-media__link">{{ section.settings.social_cta }}</a>
+    </div>
+    {% for block in section.blocks %}
+        {{ block.settings.post | image_url: width: 200 | image_tag: class: 'social-media__post image--cover' }}
+    {% endfor %}
 </section>
 {% schema %}
 {
@@ -15,7 +24,7 @@
         "type": "text",
         "id": "social_username",
         "label": "username",
-        "default": "@uncmfrt.com"
+        "default": "uncmfrt.com"
     },
     {
         "type": "text",

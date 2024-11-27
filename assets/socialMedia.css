@@ -1,0 +1,52 @@
+.social-media{
+    width: 100%;
+    padding: 0px 40px 80px 40px;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+}
+.social-media__info{
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    height: 245px;
+    background-color: #F6F6F5;
+}
+.social-media__info-header{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-left: -7px;
+}
+.social-media__info-logo{
+    width: 60px;
+    height: 60px;
+}
+.social-media__username{
+    font-size: 20px;
+    font-weight: 700;
+    color: #1B1F23;
+}
+.social-media__username span{
+    font-weight: 600;
+}
+.social-media__link{
+    text-align: center;
+    padding: 20px 40px;
+    border: 1px solid #000;
+    background-color: #fff;
+    height: 55px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1B1F23;
+    border-radius: 8px;
+}
+.social-media__post{
+    width: 100%;
+    height: 245px;
+    border-radius: 8px;
+}
