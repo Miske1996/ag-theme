@@ -334,6 +334,9 @@
         "text_color": "#ffffff",
         "banner_image": "shopify://shop_images/Component_12.png"
       }
+    },
+    "socialMedia":{
+      "type":"socialMedia"
     }
   },
   "order": [
@@ -345,6 +348,7 @@
     "badgesSection",
     "collectionVideosSwiper",
     "collections_bundles_swiper_y4aChB",
-    "bannerImage"
+    "bannerImage",
+    "socialMedia"
   ]
 }

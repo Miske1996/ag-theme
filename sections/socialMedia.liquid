@@ -1,0 +1,51 @@
+{{ 'socialMedia.css' | asset_url | stylesheet_tag }}
+<section class="social-media">
+
+</section>
+{% schema %}
+{
+  "name": "Our clients",
+  "settings": [
+    {
+        "type": "image_picker",
+        "id": "brand_logo",
+        "label": "Brand logo"
+    },
+    {
+        "type": "text",
+        "id": "social_username",
+        "label": "username",
+        "default": "@uncmfrt.com"
+    },
+    {
+        "type": "text",
+        "id": "social_cta",
+        "label": "Cta button text",
+        "default":"Follow Us on Instagram"
+    },
+    {
+        "type": "url",
+        "id": "social_url",
+        "label": "Url social media"
+    }
+  ],
+  "blocks": [
+    {
+        "type": "SocialMedia",
+        "name": "Social Media",
+        "settings": [
+            {
+                "type": "image_picker",
+                "label": "Post",
+                "id": "post"
+            }
+        ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Our clients"
+    }
+  ]
+}
+{% endschema %}
