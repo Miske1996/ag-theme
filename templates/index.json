@@ -311,7 +311,7 @@
             "text": "Take The Plunge",
             "border_color": "rgba(0,0,0,0)",
             "bg_color": "#ffffff",
-            "text_color": "#1B1F23"
+            "text_color": "#1b1f23"
           }
         },
         "button_bkaNEH": {
@@ -335,8 +335,88 @@
         "banner_image": "shopify://shop_images/Component_12.png"
       }
     },
-    "socialMedia":{
-      "type":"socialMedia"
+    "socialMedia": {
+      "type": "socialMedia",
+      "blocks": {
+        "social_media_E7JNAP": {
+          "type": "SocialMedia",
+          "settings": {
+            "post": "shopify://shop_images/Instagram.png"
+          }
+        },
+        "social_media_hQtJ37": {
+          "type": "SocialMedia",
+          "settings": {
+            "post": "shopify://shop_images/Instagram_1.png"
+          }
+        },
+        "social_media_3jBBmQ": {
+          "type": "SocialMedia",
+          "settings": {
+            "post": "shopify://shop_images/Instagram_2.png"
+          }
+        },
+        "social_media_MwBLKr": {
+          "type": "SocialMedia",
+          "settings": {
+            "post": "shopify://shop_images/Instagram_3.png"
+          }
+        },
+        "social_media_wVUFd7": {
+          "type": "SocialMedia",
+          "settings": {
+            "post": "shopify://shop_images/Instagram_4.png"
+          }
+        },
+        "social_media_q9Uw7k": {
+          "type": "SocialMedia",
+          "settings": {
+            "post": "shopify://shop_images/Instagram_5.png"
+          }
+        },
+        "social_media_zpTDKm": {
+          "type": "SocialMedia",
+          "settings": {
+            "post": "shopify://shop_images/Instagram_6.png"
+          }
+        },
+        "social_media_Ya7myF": {
+          "type": "SocialMedia",
+          "settings": {
+            "post": "shopify://shop_images/Instagram_7.png"
+          }
+        },
+        "social_media_7gFFdY": {
+          "type": "SocialMedia",
+          "settings": {
+            "post": "shopify://shop_images/Instagram_8.png"
+          }
+        },
+        "social_media_Fy433w": {
+          "type": "SocialMedia",
+          "settings": {
+            "post": "shopify://shop_images/Instagram_9.png"
+          }
+        }
+      },
+      "block_order": [
+        "social_media_E7JNAP",
+        "social_media_hQtJ37",
+        "social_media_3jBBmQ",
+        "social_media_MwBLKr",
+        "social_media_wVUFd7",
+        "social_media_q9Uw7k",
+        "social_media_zpTDKm",
+        "social_media_Ya7myF",
+        "social_media_7gFFdY",
+        "social_media_Fy433w"
+      ],
+      "settings": {
+        "brand_logo": "shopify://shop_images/Group_2856.png",
+        "social_username": "@uncmfrt.com",
+        "social_cta": "Follow Us on Instagram",
+        "social_url": "https://instagram.com"
+      }
     }
   },
   "order": [
