@@ -1,12 +1,6 @@
 {% comment %}
   block
 {% endcomment %}
-{% comment %} <link
-  rel="stylesheet"
-  href="{{ 'cardLink.css' | asset_url }}"
-  media="print"
-  onload="this.media='all'; this.onload=null;"
-> {% endcomment %}
 {{ 'cardLink.css' | asset_url | stylesheet_tag }}
 
 <li class="card-link">
