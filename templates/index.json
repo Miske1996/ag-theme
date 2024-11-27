@@ -397,6 +397,12 @@
           "settings": {
             "post": "shopify://shop_images/Instagram_9.png"
           }
+        },
+        "social_media_MG7nqt": {
+          "type": "SocialMedia",
+          "settings": {
+            "post": "shopify://shop_images/Instagram_2.png"
+          }
         }
       },
       "block_order": [
@@ -409,11 +415,12 @@
         "social_media_zpTDKm",
         "social_media_Ya7myF",
         "social_media_7gFFdY",
-        "social_media_Fy433w"
+        "social_media_Fy433w",
+        "social_media_MG7nqt"
       ],
       "settings": {
         "brand_logo": "shopify://shop_images/Group_2856.png",
-        "social_username": "@uncmfrt.com",
+        "social_username": "uncmfrt.com",
         "social_cta": "Follow Us on Instagram",
         "social_url": "https://instagram.com"
       }
