@@ -302,8 +302,38 @@
         ]
       }
     },
-    "bannerImage":{
-      "type" : "bannerImage"
+    "bannerImage": {
+      "type": "bannerImage",
+      "blocks": {
+        "button_F8Rfwx": {
+          "type": "Button",
+          "settings": {
+            "text": "Take The Plunge",
+            "border_color": "#ffffff",
+            "bg_color": "#ffffff",
+            "text_color": "#1B1F23"
+          }
+        },
+        "button_bkaNEH": {
+          "type": "Button",
+          "settings": {
+            "text": "Dive Deeper",
+            "border_color": "#ffffff",
+            "bg_color": "rgba(0,0,0,0)",
+            "text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "button_F8Rfwx",
+        "button_bkaNEH"
+      ],
+      "settings": {
+        "title": "The Next Generation is Here",
+        "subtitle": "Innovative Engineering. Intelligent Design. Meet The Plunge All-I.",
+        "text_color": "#ffffff",
+        "banner_image": "shopify://shop_images/Component_12.png"
+      }
     }
   },
   "order": [
