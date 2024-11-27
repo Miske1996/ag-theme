@@ -1,0 +1,6 @@
+<template id="CardsCollection">
+    {% for product in collection.products %}
+        {% render 'productCard', product: product, class: 'swiper-slide' %}
+    {% endfor %}
+    <script src="{{ "ProductCard.js" | asset_url }}" defer></script>
+</template>

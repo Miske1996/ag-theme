@@ -1,10 +1,10 @@
 {
   "sections": {
-    "main":{
-      "type": "section-tmp"
+    "collectionProductsCardTemplate":{
+      "type": "collectionProductsCardTemplate"
     }
   },
   "order": [
-   "main"
+   "collectionProductsCardTemplate"
   ]
 }

@@ -1,4 +1,49 @@
 {{ 'collectionsBundlesSwiper.css' | asset_url | stylesheet_tag }}
+{{ 'productCard.css' | asset_url | stylesheet_tag }}
+<collection-bundles-swiper>
+
+<section class="collection-bundles-swiper">
+    <header class="collection-bundles-swiper__header">
+        <div class="collection-bundles-swiper__title">
+            <h3 class="collection-bundles-swiper__h3">{{ section.settings.heading }}</h3>
+            <h2 class="collection-bundles-swiper__h2">{{ section.settings.subHeading }}</h2>
+        </div>
+        <div class="collection-bundles-swiper__navigation">
+            {% for collection in section.settings.collection_list %}
+                <button class="collection-bundles-swiper__nav-link {% if forloop.first %}collection-bundles-swiper__nav-link--active{% endif %}" url="{{ collection.url }}">{{ collection.title }}</button>
+            {% endfor %}
+        </div>
+        <div class="collection-bundles-swiper__slider-buttons">
+            <a class="collection-bundles-swiper__view-all" href="/">View All Bundles</a>
+            <div class="collection-bundles-swipers__buttons">
+                <button class="collection-bundles-swiper__swiper-button-prev swiper-button-prev" aria-label="Previous slide">
+                    <svg width="40" height="40" aria-hidden="false">
+                        <use xlink:href="#icon-arrow-left"></use>
+                    </svg>
+                </button>
+                <button class="collection-bundles-swiper__swiper-button-next swiper-button-next" aria-label="Next slide">
+                    <svg width="40" height="40" aria-hidden="false">
+                        <use xlink:href="#icon-arrow-right"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="collection-bundles-swiper__products swiper">
+        <ul class="collection-bundles-swiper__wrapper swiper-wrapper">
+          {% for collection in section.settings.collection_list %}
+            {% for product in collection.products %}
+                {% render 'productCard', product: product, class: 'swiper-slide' %}
+            {% endfor %}
+            {% break %}
+          {% endfor %}
+          <script src="{{ "ProductCard.js" | asset_url }}" defer></script>
+        </ul>
+      </div>
+</section>
+</collection-bundles-swiper>
+<script src="{{ "CollectionsBundlesSwiper.js" | asset_url }}" defer></script>
+
 {% schema %}
 {
   "name": "Collection bundles swiper",
@@ -9,6 +54,12 @@
       "label": "Title heading",
       "default": "📦 Goals Specific"
     },
+    {
+        "type": "text",
+        "id": "subHeading",
+        "label": "Subtitle heading",
+        "default": "Bundles"
+      },
     {
       "type": "collection_list",
       "id": "collection_list",

@@ -24,6 +24,7 @@
     cursor: pointer;
     position: unset;
     z-index: 1;
+    margin-top: 0;
 }
 .collection-swiper-header__text{
     display: flex;

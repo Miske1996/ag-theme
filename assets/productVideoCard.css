@@ -16,7 +16,7 @@ product-video-card{
     overflow: hidden;
     position: relative;
     border-radius: 8px;
-    transition: height .3s cubic-bezier(0.39, 0.575, 0.565, 1);
+    transition: height .4s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 .product-video-card:hover .product-video-card__video-container{
   height: 500px;

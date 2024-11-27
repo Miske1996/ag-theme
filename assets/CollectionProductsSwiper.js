@@ -28,7 +28,6 @@ if (!customElements.get("collection-products-swiper")) {
         if (this.swiper) {
           this.swiper.destroy(true, true); // Destroy swiper instance
           this.swiper = null; // Reset the swiper reference
-          this.classList.remove("swiper");
         }
       }
   
