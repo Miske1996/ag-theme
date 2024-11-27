@@ -240,6 +240,19 @@
         "heading": "Trusted & Proven by Science",
         "collection": "real-people-real-results"
       }
+    },
+    "collections_bundles_swiper_y4aChB": {
+      "type": "collectionsBundlesSwiper",
+      "settings": {
+        "heading": "📦 Goals Specific",
+        "collection_list": [
+          "sleep",
+          "cognitive-function",
+          "foundational-health",
+          "athletic-performance",
+          "hormone-support"
+        ]
+      }
     }
   },
   "order": [
@@ -248,6 +261,7 @@
     "ourClients",
     "cardsLinksSection",
     "collectionProductsSwiper",
-    "collectionVideosSwiper"
+    "collectionVideosSwiper",
+    "collections_bundles_swiper_y4aChB"
   ]
 }
