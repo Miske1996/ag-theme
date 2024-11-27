@@ -301,6 +301,9 @@
           "hormone-support"
         ]
       }
+    },
+    "bannerImage":{
+      "type" : "bannerImage"
     }
   },
   "order": [
@@ -311,6 +314,7 @@
     "collectionProductsSwiper",
     "badgesSection",
     "collectionVideosSwiper",
-    "collections_bundles_swiper_y4aChB"
+    "collections_bundles_swiper_y4aChB",
+    "bannerImage"
   ]
 }

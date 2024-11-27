@@ -1,6 +1,22 @@
 {{ 'badgesSection.css' | asset_url | stylesheet_tag }}
 <section class="badges-section">
-
+    <div class="badges-section__header">
+        <h1 class="badges-section__h1">{{ section.settings.title_h1 }}</h1>
+        <h2 class="badges-section__h2">{{ section.settings.title_h2 }}</h2>
+    </div>
+    <ul class="badges-section__list">
+        {% for block in section.blocks %}
+            <li class="badge">
+                <div class="badge__image-container">
+                    {{ block.settings.logo | image_url: width: 100 | image_tag: class: 'badge__image image--contain' }}
+                </div>
+                <div class="badge__content">
+                    <span class="badge__title">{{ block.settings.title }}</span>
+                    <span class="badge__subtitle">{{ block.settings.subtitle }}</span>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
 </section>
 {% schema %}
 {

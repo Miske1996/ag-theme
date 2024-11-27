@@ -1,0 +1,65 @@
+{{ 'bannerImage.css' | asset_url | stylesheet_tag }}
+<section class="banner-image">
+
+</section>
+{% schema %}
+{
+  "name": "Banner image",
+  "settings": [
+    {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "The Next Generation is Here"
+    },
+    {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subtitle",
+        "default": "Innovative Engineering. Intelligent Design. Meet The Plunge All-I."
+    },
+    {
+        "type": "image_picker",
+        "id": "banner_image",
+        "label": "Banner image"
+    }
+  ],
+  "blocks": [
+    {
+        "type": "Button",
+        "name": "Button",
+        "settings": [
+            {
+                "type": "text",
+                "id": "text",
+                "label": "Button text",
+                "default": "Take The Plunge"
+            },
+            {
+                "type": "color",
+                "id": "border_color",
+                "label": "Button border color",
+                "default": "#ffffff"
+            },
+            {
+                "type": "color",
+                "id": "bg_color",
+                "label": "Button background color",
+                "default": "#ffffff"
+            },
+            {
+                "type": "color",
+                "id": "text_color",
+                "label": "Button text color",
+                "default": "#1B1F23"
+            },
+        ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner image"
+    }
+  ]
+}
+{% endschema %}
