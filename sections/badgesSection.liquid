@@ -1,0 +1,53 @@
+{{ 'badgesSection.css' | asset_url | stylesheet_tag }}
+<section class="badges-section">
+
+</section>
+{% schema %}
+{
+  "name": "Badges section",
+  "settings": [
+    {
+        "type": "text",
+        "id": "title_h1",
+        "label": "Heading",
+        "default": "🧐 Why Health & Fitness"
+    },
+    {
+        "type": "text",
+        "id": "title_h2",
+        "label": "Sub heading",
+        "default": "Clean Supplements - Made For You"
+    }
+  ],
+  "blocks": [
+    {
+        "type": "Badge",
+        "name": "Badge Block",
+        "settings": [
+            {
+                "type": "image_picker",
+                "label": "Badge logo",
+                "id": "logo"
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Badge title",
+                "default": "We Make It Easy"
+            },
+            {
+                "type": "text",
+                "id": "subtitle",
+                "label": "Badge subtitle",
+                "default": "Personalized Solutions & Guidance Mean You Get Just What You Need Nothing More"
+            },
+        ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Badges section"
+    }
+  ]
+}
+{% endschema %}

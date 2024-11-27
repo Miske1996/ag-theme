@@ -234,6 +234,9 @@
         "collection": "supplements"
       }
     },
+    "badgesSection":{
+      "type" : "badgesSection"
+    },
     "collectionVideosSwiper": {
       "type": "collectionVideosSwiper",
       "settings": {
@@ -261,6 +264,7 @@
     "ourClients",
     "cardsLinksSection",
     "collectionProductsSwiper",
+    "badgesSection",
     "collectionVideosSwiper",
     "collections_bundles_swiper_y4aChB"
   ]
