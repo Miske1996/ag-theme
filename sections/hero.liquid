@@ -1,9 +1,11 @@
-<link
+{% comment %} <link
   rel="stylesheet"
   href="{{ 'hero.css' | asset_url }}"
   media="print"
   onload="this.media='all'; this.onload=null;"
->
+> {% endcomment %}
+{{ 'hero.css' | asset_url | stylesheet_tag }}
+
 <div class="hero">
   {{ section.settings.hero_image | image_url: width: 2000 | image_tag: class: 'hero__image image--cover' }}
   <div class="hero__video">

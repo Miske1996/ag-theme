@@ -1,9 +1,10 @@
-<link
+{% comment %} <link
   rel="stylesheet"
   href="{{ 'cardsLinksSection.css' | asset_url }}"
   media="print"
   onload="this.media='all'; this.onload=null;"
->
+> {% endcomment %}
+{{ 'cardsLinksSection.css' | asset_url | stylesheet_tag }}
 <section class="cards-links">
     <div class="cards-links__headings">
         <h1 class="cards-links__h1">

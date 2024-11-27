@@ -10,5 +10,11 @@
 .collection-videos-swiper__products{
     display: flex;
     width: 100%;
+}
+.collection-videos-swiper__wrapper{
+    display: flex;
+    width: 100%;
     list-style-type: none;
+    align-items: center;
+    height: 590px;
 }

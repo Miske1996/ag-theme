@@ -3,15 +3,17 @@
   collection,
   buttons_class
 {% endcomment %}
-<link
+{% comment %} <link
   rel="stylesheet"
   href="{{ 'collectionSwiperHeader.css' | asset_url }}"
   media="print"
   onload="this.media='all'; this.onload=null;"
->
+> {% endcomment %}
+{{ 'collectionSwiperHeader.css' | asset_url | stylesheet_tag }}
+
 <div class="collection-swiper-header">
   <div class="collection-swiper-header__main">
-    <button class="collection-swiper-header__prev {{buttons_class}}__swiper-button-prev" aria-label="Previous slide">
+    <button class="collection-swiper-header__prev {{buttons_class}}__swiper-button-prev swiper-button-prev" aria-label="Previous slide">
         <svg width="40" height="40" aria-hidden="false">
             <use xlink:href="#icon-arrow-left"></use>
         </svg>
@@ -20,7 +22,7 @@
         <h1 class="collection-swiper-header__h1">{{ header }}</h1>
         <h2 class="collection-swiper-header__h2">{{ collection.title }}</h2>
     </div>
-    <button class="collection-swiper-header__next {{buttons_class}}__swiper-button-next" aria-label="Next slide">
+    <button class="collection-swiper-header__next {{buttons_class}}__swiper-button-next swiper-button-next" aria-label="Next slide">
         <svg width="40" height="40" aria-hidden="false">
             <use xlink:href="#icon-arrow-right"></use>
         </svg>

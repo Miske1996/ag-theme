@@ -4,6 +4,8 @@
     media="print"
     onload="this.media='all'; this.onload=null;"
   >
+{{ 'ourClients.css' | asset_url | stylesheet_tag }}
+
 <div class="our-clients">
     <div class="our-clients__reviews">
         <span class="our-clients__recommendation">

@@ -1,9 +1,11 @@
-<link
+{% comment %} <link
   rel="stylesheet"
   href="{{ 'header.css' | asset_url }}"
   media="print"
   onload="this.media='all'; this.onload=null;"
->
+> {% endcomment %}
+{{ 'header.css' | asset_url | stylesheet_tag }}
+
 <header class="header ">
   <div class="header__wrapper">
     <a class="header__logo-link" href="/">

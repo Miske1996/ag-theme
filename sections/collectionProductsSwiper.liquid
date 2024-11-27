@@ -1,4 +1,4 @@
-<link
+{% comment %} <link
   rel="stylesheet"
   href="{{ 'collectionProductsSwiper.css' | asset_url }}"
   media="print"
@@ -9,7 +9,10 @@
     href="{{ 'productVideoCard.css' | asset_url }}"
     media="print"
     onload="this.media='all'; this.onload=null;"
-    >
+    > {% endcomment %}
+{{ 'collectionProductsSwiper.css' | asset_url | stylesheet_tag }}
+{{ 'productVideoCard.css' | asset_url | stylesheet_tag }}
+
 <collection-products-swiper>
   <section class="collection-products-swiper">
     {% render 'collectionSwiperHeader', collection: section.settings.collection, header: section.settings.heading, buttons_class:"collection-products-swiper" %}

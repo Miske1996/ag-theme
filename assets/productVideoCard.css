@@ -1,13 +1,14 @@
 product-video-card{
-    height: 100%;
     display: flex;
     width: fit-content !important;
+    height: fit-content !important;
 }
 .product-video-card{
     width: 300px;
     display: flex;
     flex-direction: column;
     gap: 16px;
+    cursor: pointer;
 }
 .product-video-card__video-container{
     width: 100%;
@@ -15,7 +16,12 @@ product-video-card{
     overflow: hidden;
     position: relative;
     border-radius: 8px;
+    transition: height .3s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
+.product-video-card:hover .product-video-card__video-container{
+  height: 500px;
+}
+
 .product-video-card__video-container video {
     /* Make video to at least 100% wide and tall */
     min-width: 100%; 

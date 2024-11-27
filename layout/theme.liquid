@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
-    <link
+    {% comment %} <link
       rel="stylesheet"
       href="{{ 'base.css' | asset_url }}"
       media="print"
       onload="this.media='all'; this.onload=null;"
-    >
+    > {% endcomment %}
+    {{ 'base.css' | asset_url | stylesheet_tag }}
+
     <title>
       {{ page_title }}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
