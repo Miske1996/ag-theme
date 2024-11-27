@@ -234,8 +234,52 @@
         "collection": "supplements"
       }
     },
-    "badgesSection":{
-      "type" : "badgesSection"
+    "badgesSection": {
+      "type": "badgesSection",
+      "blocks": {
+        "badge_cMm4TF": {
+          "type": "Badge",
+          "settings": {
+            "logo": "shopify://shop_images/like_1.svg",
+            "title": "We Make It Easy",
+            "subtitle": "Personalized Solutions & Guidance Mean You Get Just What You Need Nothing More"
+          }
+        },
+        "badge_7DrU6K": {
+          "type": "Badge",
+          "settings": {
+            "logo": "shopify://shop_images/leaves_1_1.svg",
+            "title": "Clean & Effective",
+            "subtitle": "Proven Ingredients, not Artificial, Crafted By Experts For Optimal Effectiveness"
+          }
+        },
+        "badge_CefgjR": {
+          "type": "Badge",
+          "settings": {
+            "logo": "shopify://shop_images/consultation_1_1.svg",
+            "title": "Your Free Dietitian",
+            "subtitle": "Every Gainful Subscriber Gets Free, 1:1 Access Their Own Registered Dietitian."
+          }
+        },
+        "badge_gte3j3": {
+          "type": "Badge",
+          "settings": {
+            "logo": "shopify://shop_images/clipboard_1.svg",
+            "title": "Made For You",
+            "subtitle": "Performance is Personal. Personalized & Customizable Products For Your Needs, Body & Goals"
+          }
+        }
+      },
+      "block_order": [
+        "badge_cMm4TF",
+        "badge_7DrU6K",
+        "badge_CefgjR",
+        "badge_gte3j3"
+      ],
+      "settings": {
+        "title_h1": "🧐 Why Health & Fitness",
+        "title_h2": "Clean Supplements - Made For You"
+      }
     },
     "collectionVideosSwiper": {
       "type": "collectionVideosSwiper",
@@ -248,6 +292,7 @@
       "type": "collectionsBundlesSwiper",
       "settings": {
         "heading": "📦 Goals Specific",
+        "subHeading": "Bundles",
         "collection_list": [
           "sleep",
           "cognitive-function",
