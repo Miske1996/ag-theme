@@ -302,6 +302,9 @@
         ]
       }
     },
+    "productsDescriptionSwiper":{
+      "type":"productsDescriptionSwiper"
+    },
     "bannerImage": {
       "type": "bannerImage",
       "blocks": {
@@ -435,6 +438,7 @@
     "badgesSection",
     "collectionVideosSwiper",
     "collections_bundles_swiper_y4aChB",
+    "productsDescriptionSwiper",
     "bannerImage",
     "socialMedia"
   ]

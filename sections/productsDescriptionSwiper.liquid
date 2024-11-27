@@ -1,0 +1,52 @@
+{{ 'productsDescriptionSwiper.css' | asset_url | stylesheet_tag }}
+<section class="product-descripton-swiper">
+</section>
+{% schema %}
+{
+  "name": "Products Blend",
+  "settings": [
+    {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Simple & Effective Ingredients"
+    },
+    {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subtitle",
+        "default": "Customized Protein Powder"
+    }
+  ],
+  "blocks": [
+    {
+        "type": "Product",
+        "name": "Product Blend",
+        "settings": [
+            {
+                "type": "product",
+                "label": "Porduct",
+                "id": "product"
+            },
+            {
+                "type": "metaobject_list",
+                "id": "benefits",
+                "label": "Choose benefits",
+                "metaobject_type": "product_benefit_badge"
+            },
+            {
+                "type": "metaobject_list",
+                "id": "ingredients",
+                "label": "Choose ingredients",
+                "metaobject_type": "product_ingredient_badge"
+            },
+        ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Products Blend"
+    }
+  ]
+}
+{% endschema %}

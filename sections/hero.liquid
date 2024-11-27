@@ -1,7 +1,6 @@
 {{ 'hero.css' | asset_url | stylesheet_tag }}
 
 <div class="hero">
-  {{ section.settings.hero_image | image_url: width: 2000 | image_tag: class: 'hero__image image--cover' }}
   <div class="hero__video">
   {{ section.settings.hero_video | video_tag: autoplay: true, loop: true, muted: true, controls: false  }}
   </div>
@@ -10,28 +9,6 @@
     <a href="{{ section.settings.hero_cta-url }}" class="button--secondary">{{ section.settings.hero_cta }}</a>
   </div>
 </div>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const heroImage = document.querySelector(".hero__image");
-    const heroVideo = document.querySelector(".hero video");
-  
-    if (heroVideo) {
-      // Ensure the video has no sound and autoplays
-      heroVideo.muted = true;
-      heroVideo.autoplay = true;
-      heroVideo.loop = true; // Optional: loops the video
-  
-      // Hide the image until the video is ready
-      heroVideo.style.display = "none";
-      heroVideo.addEventListener("canplay", () => {
-        heroImage.style.display = "none"; // Hide the image
-        heroVideo.style.display = "block"; // Show the video
-        heroVideo.play();
-      });
-    }
-  });
-  
-</script>
 {% schema %}
 {
   "name": "Hero",
