@@ -397,6 +397,9 @@
         "banner_image": "shopify://shop_images/Component_12.png"
       }
     },
+    "blogPosts":{
+      "type" : "blogPosts"
+    },
     "socialMedia": {
       "type": "socialMedia",
       "blocks": {
@@ -499,6 +502,7 @@
     "collections_bundles_swiper_y4aChB",
     "productsDescriptionSwiper",
     "bannerImage",
+    "blogPosts",
     "socialMedia"
   ]
 }
