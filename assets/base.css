@@ -5,6 +5,10 @@ body,*{
     font-family: 'Rubik';
     font-weight: 500;
 }
+body{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 button{
     background: none;
     border: none;

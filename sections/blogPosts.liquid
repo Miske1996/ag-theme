@@ -1,0 +1,29 @@
+{{ 'blogPosts.css' | asset_url | stylesheet_tag }}
+<section class="blog-posts"></section>
+{% schema %}
+{
+  "name": "Blog Posts",
+  "settings": [
+    {
+        "type": "article",
+        "id": "article1",
+        "label": "Article 1"
+    },
+    {
+        "type": "article",
+        "id": "article2",
+        "label": "Article 2"
+    },
+    {
+        "type": "article",
+        "id": "article1",
+        "label": "Article 2"
+    },
+  ],
+  "presets": [
+    {
+      "name": "Blog Posts"
+    }
+  ]
+}
+{% endschema %}
