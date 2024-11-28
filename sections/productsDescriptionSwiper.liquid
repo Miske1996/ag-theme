@@ -1,46 +1,122 @@
 {{ 'productsDescriptionSwiper.css' | asset_url | stylesheet_tag }}
-<section class="product-descripton-swiper">
-</section>
+<products-description-swiper>
+  <section class="product-description-swiper">
+    <header class="product-description-swiper__header">
+      <h2 class="product-description-swiper__h2">{{ section.settings.title }}</h2>
+      <h3 class="product-description-swiper__h3">{{ section.settings.subtitle }}</h3>
+    </header>
+    <div class="product-description-swiper__container">
+      <button class="product-description-swiper__swiper-button-prev swiper-button-prev" aria-label="Previous slide">
+        <svg width="40" height="40" aria-hidden="false">
+          <use xlink:href="#icon-arrow-left"></use>
+        </svg>
+      </button>
+      <div class="product-description-swiper__swiper swiper">
+        <div class="product-description-swiper__wrapper swiper-wrapper">
+          {% for block in section.blocks %}
+            <div class="blend swiper-slide">
+              <div class="blend__image-container">
+                {{
+                  block.settings.product.featured_image
+                  | image_url: width: 1000
+                  | image_tag: class: 'blend__image image--contain'
+                }}
+              </div>
+              <div class="blend__content">
+                <div class="blend__benefits">
+                  <div class="blend__benefits-wrapper">
+                    <h3 class="blend__benefits-title">The Blend</h3>
+                    <div class="blend__benefits-list">
+                      {% for benefit in block.settings.benefits %}
+                        <div class="blend__benefit">
+                          <div class="blend__benefit-image-container">
+                            {{
+                              benefit.badge.value
+                              | image_url: width: 200
+                              | image_tag: class: 'blend__benefit-image image--contain'
+                            }}
+                          </div>
+                          <span class="blend__benefit-text">{{ benefit.benefit.value }}</span>
+                        </div>
+                      {% endfor %}
+                    </div>
+                  </div>
+                </div>
+                <div class="blend__ingredients">
+                  <div class="blend__ingredients-wrapper">
+                    <h3 class="blend__ingredients-title">Active Ingredients</h3>
+                    <div class="blend__ingredients-list">
+                      {% for ingredient in block.settings.ingredients %}
+                        <div class="blend__ingredient">
+                          <div class="blend__ingredient-image-container">
+                            {{
+                              ingredient.badge.value
+                              | image_url: width: 200
+                              | image_tag: class: 'blend__ingredient-image image--contain'
+                            }}
+                          </div>
+                          <span class="blend__ingredient-title">{{ ingredient.title.value }}</span>
+                          <p class="blend__ingredient-description">{{ ingredient.description.value }}</p>
+                        </div>
+                      {% endfor %}
+                    </div>
+                    <a href="#" class="blend__cta">Customize This Blend</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <button class="product-description-swiper__swiper-button-next swiper-button-next" aria-label="Next slide">
+        <svg width="40" height="40" aria-hidden="false">
+          <use xlink:href="#icon-arrow-right"></use>
+        </svg>
+      </button>
+    </div>
+  </section>
+</products-description-swiper>
+<script src="{{ "ProductsDescriptionSwiper.js" | asset_url }}" defer></script>
 {% schema %}
 {
   "name": "Products Blend",
   "settings": [
     {
-        "type": "text",
-        "id": "title",
-        "label": "Title",
-        "default": "Simple & Effective Ingredients"
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Simple & Effective Ingredients"
     },
     {
-        "type": "text",
-        "id": "subtitle",
-        "label": "Subtitle",
-        "default": "Customized Protein Powder"
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Customized Protein Powder"
     }
   ],
   "blocks": [
     {
-        "type": "Product",
-        "name": "Product Blend",
-        "settings": [
-            {
-                "type": "product",
-                "label": "Porduct",
-                "id": "product"
-            },
-            {
-                "type": "metaobject_list",
-                "id": "benefits",
-                "label": "Choose benefits",
-                "metaobject_type": "product_benefit_badge"
-            },
-            {
-                "type": "metaobject_list",
-                "id": "ingredients",
-                "label": "Choose ingredients",
-                "metaobject_type": "product_ingredient_badge"
-            },
-        ]
+      "type": "Product",
+      "name": "Product Blend",
+      "settings": [
+        {
+          "type": "product",
+          "label": "Porduct",
+          "id": "product"
+        },
+        {
+          "type": "metaobject_list",
+          "id": "benefits",
+          "label": "Choose benefits",
+          "metaobject_type": "product_benefit_badge"
+        },
+        {
+          "type": "metaobject_list",
+          "id": "ingredients",
+          "label": "Choose ingredients",
+          "metaobject_type": "product_ingredient_badge"
+        }
+      ]
     }
   ],
   "presets": [

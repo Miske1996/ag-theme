@@ -1,0 +1,214 @@
+.product-description-swiper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 52px;
+    width: 100%;
+    background-color: #F6F6F5;
+    padding: 80px 40px;
+}
+.product-description-swiper__header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+.product-description-swiper__h2{
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+    text-align: center;
+}
+.product-description-swiper__h3{
+    font-size: 40px;
+    font-weight: 500;
+    color: #1B1F23;
+    text-align: center;
+}
+.product-description-swiper__container{
+    display: flex;
+    width: 100%;
+    position: relative;
+    align-items: center;
+}
+.product-description-swiper__swiper{
+    display: flex;
+    width: calc(100% - 160px);
+    align-items: center;
+    gap: 40px;
+    position: relative;
+}
+.product-description-swiper__wrapper{
+    display: flex;
+    width: 100%;
+}
+.product-description-swiper__swiper-button-next::after,
+.product-description-swiper__swiper-button-prev::after {
+  content: "" !important;
+}
+.product-description-swiper__swiper-button-prev svg, .product-description-swiper__swiper-button-next svg{
+    fill: none;
+}
+.product-description-swiper__swiper-button-next{
+    right: 0;
+}
+.product-description-swiper__swiper-button-prev{
+    left: 0;
+}
+.product-description-swiper__swiper-button-prev.swiper-button-prev,.product-description-swiper__swiper-button-next.swiper-button-next{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    cursor: pointer;
+    z-index: 10;
+    transform: translateY(-50%);
+    margin-top: 0;
+}
+
+.blend{
+    display: flex;
+    width: 100%;
+    border: 1px solid #0000001A;
+    border-radius: 8px;
+    overflow: hidden;
+    height:548px;
+}
+.blend__image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-right: 1px solid #0000001A;
+    width: 590px;
+    height: 548px;
+}
+.blend__image{
+    width: 356px;
+    aspect-ratio: 1/1;
+}
+
+.blend__content{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+}
+.blend__benefits{
+    display: flex;
+    padding: 40px 56px;
+    background-color: #1B1F23;
+    width: 100%;
+}
+.blend__benefits-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    height: fit-content;
+}
+.blend__benefits-title{
+    font-weight: 500;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+.blend__benefits-list{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.blend__benefit{
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    max-width: 200px;
+}
+.blend__benefit-image-container{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    background-color: #252A2F;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+.blend__benefit-image{
+    width: 100%;
+    height: 100%;
+}
+.blend__benefit-text{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.blend__ingredients{
+    display: flex;
+    background-color: #fff;
+    padding: 30px 45px;
+    width: 100%;
+    height: 100%;
+}
+.blend__ingredients-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.blend__ingredients-title{
+    font-size: 18px;
+    font-weight: 500;
+    color: #1B1F23;
+    text-align: center;
+}
+.blend__ingredients-list{
+    display: flex;
+    width: 100%;
+    margin-top: 24px;
+    justify-content: space-between;
+    gap: 40px;
+}
+.blend__ingredient{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.blend__ingredient-image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F6F6F5;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+}
+.blend__ingredient-image{
+    width: 22px;
+    height: 22px;
+}
+.blend__ingredient-title{
+    font-size: 16px;
+    font-weight: 500;
+    color: #1B1F23;
+}
+.blend__ingredient-description{
+    font-size: 14px;
+    font-weight: 400;
+    color: #1B1F2399;
+    max-width: 250px;
+}
+.blend__cta{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    background-color: #1B1F23;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #FFFFFF;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+}
