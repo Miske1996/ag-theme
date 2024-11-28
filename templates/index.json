@@ -397,8 +397,13 @@
         "banner_image": "shopify://shop_images/Component_12.png"
       }
     },
-    "blogPosts":{
-      "type" : "blogPosts"
+    "blogPosts": {
+      "type": "blogPosts",
+      "settings": {
+        "article1": "balanced-diet/taming-the-fire-within-everything-you-need-to-know-about-inflammation",
+        "article2": "balanced-diet/foundational-supplements-build-a-better-you",
+        "article3": "balanced-diet/optimize-your-sleep-with-these-15-strategies"
+      }
     },
     "socialMedia": {
       "type": "socialMedia",
