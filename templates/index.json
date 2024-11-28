@@ -330,7 +330,11 @@
               "boosts-energy-levels",
               "whey-based"
             ],
-            "ingredients": []
+            "ingredients": [
+              "whey-protein-isolate",
+              "grass-fed-whey-protein",
+              "creatine"
+            ]
           }
         },
         "product_FmfGL6": {
