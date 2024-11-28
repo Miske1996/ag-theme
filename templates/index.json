@@ -302,8 +302,55 @@
         ]
       }
     },
-    "productsDescriptionSwiper":{
-      "type":"productsDescriptionSwiper"
+    "productsDescriptionSwiper": {
+      "type": "productsDescriptionSwiper",
+      "blocks": {
+        "product_TCxQpc": {
+          "type": "Product",
+          "settings": {
+            "product": "magnesium-l-threonate",
+            "benefits": [
+              "supports-faster-recovery",
+              "enhances-brain-function",
+              "aids-joint-recovery"
+            ],
+            "ingredients": [
+              "momentous-creatine",
+              "omega-3",
+              "momentous-omega-3"
+            ]
+          }
+        },
+        "product_dGgLYF": {
+          "type": "Product",
+          "settings": {
+            "product": "100-plant-protein",
+            "benefits": [
+              "clean-ingredients",
+              "boosts-energy-levels",
+              "whey-based"
+            ],
+            "ingredients": []
+          }
+        },
+        "product_FmfGL6": {
+          "type": "Product",
+          "settings": {
+            "product": "",
+            "benefits": [],
+            "ingredients": []
+          }
+        }
+      },
+      "block_order": [
+        "product_TCxQpc",
+        "product_dGgLYF",
+        "product_FmfGL6"
+      ],
+      "settings": {
+        "title": "Simple & Effective Ingredients",
+        "subtitle": "Customized Protein Powder"
+      }
     },
     "bannerImage": {
       "type": "bannerImage",
