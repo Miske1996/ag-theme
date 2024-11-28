@@ -340,9 +340,17 @@
         "product_FmfGL6": {
           "type": "Product",
           "settings": {
-            "product": "",
-            "benefits": [],
-            "ingredients": []
+            "product": "omega-3",
+            "benefits": [
+              "clean-ingredients",
+              "enhances-brain-function",
+              "improves-heart-health"
+            ],
+            "ingredients": [
+              "omega-3",
+              "momentous-omega-3",
+              "creatine"
+            ]
           }
         }
       },
