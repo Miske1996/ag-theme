@@ -1,5 +1,78 @@
 {{ 'blogPosts.css' | asset_url | stylesheet_tag }}
-<section class="blog-posts"></section>
+<section class="blog-posts">
+    <header class="blog-posts__header">
+        <div class="blog-posts__header-title">
+            <h2 class="blog-posts__header-h2">✍️ Blogs</h2>
+            <h3 class="blog-posts__header-h3">Latest Articles</h3>
+        </div>
+        <a class="blog-posts__header-link" href="#">View All</a>
+    </header>
+    <div class="blog-posts__posts">
+        <a class="blog-posts__main-post" href="#">
+            {%liquid
+                assign split_1 = section.settings.article1.url | split: '/blogs/'
+                assign split_2 = split_1[1] | split: '/'
+                assign blog_handle = split_2[0] | strip
+                assign article_blog = blogs[blog_handle]
+                %}
+            {{ section.settings.article1.image | image_url: width: 1000 | image_tag: class: 'blog-posts__main-image image--cover' }}
+            <div class="blog-posts__main-content"> 
+                <div class="blog-posts__main-title">
+                    <h5 class="blogs-posts__main-h5">{{ article_blog.title }}</h5>
+                    <h6 class="blogs-posts__main-h6">{{ section.settings.article1.title }}</h6>
+                </div>
+                <div class="blog-posts__main-info">
+                    <span class="blog-posts__main-author">{{ section.settings.article1.author }}</span>
+                    <span class="blog-posts__main-seperator"></span>
+                    <span class="blog-posts__main-date">{{ section.settings.article1.published_at | date: "%B %d, %Y" }}</span>
+                </div>
+            </div>
+        </a>
+        <div class="blog-posts__col-posts">
+            <a class="article" href="#">
+                {{ section.settings.article2.image | image_url: width: 1000 | image_tag: class: 'article__image image--cover' }}
+                {%liquid
+                    assign split_1 = section.settings.article2.url | split: '/blogs/'
+                    assign split_2 = split_1[1] | split: '/'
+                    assign blog_handle = split_2[0] | strip
+                    assign article_blog = blogs[blog_handle]
+                %}
+                <div class="article__content">
+                    <h5 class="article__blog">{{ article_blog.title }}</h5>
+                    <div class="article__info">
+                        <h6 class="article__title">{{ section.settings.article2.title }}</h6>
+                        <div class="article__footer">
+                            <span class="article__author">{{ section.settings.article2.author }}</span>
+                            <div class="article__footer-seperator"></div>
+                            <span class="article__date">{{ section.settings.article2.published_at | date: "%B %d, %Y" }}</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a class="article" href="#">
+                {{ section.settings.article3.image | image_url: width: 1000 | image_tag: class: 'article__image image--cover' }}
+                {%liquid
+                    assign split_1 = section.settings.article3.url | split: '/blogs/'
+                    assign split_2 = split_1[1] | split: '/'
+                    assign blog_handle = split_2[0] | strip
+                    assign article_blog = blogs[blog_handle]
+                %}
+                <div class="article__content">
+                    <h5 class="article__blog">{{ article_blog.title }}</h5>
+                    <div class="article__info">
+                        <h6 class="article__title">{{ section.settings.article3.title }}</h6>
+                        <div class="article__footer">
+                            <span class="article__author">{{ section.settings.article3.author }}</span>
+                            <div class="article__footer-seperator"></div>
+                            <span class="article__date">{{ section.settings.article3.published_at | date: "%B %d, %Y" }}</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
 {% schema %}
 {
   "name": "Blog Posts",
