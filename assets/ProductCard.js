@@ -51,7 +51,7 @@ if (!customElements.get("product-card")) {
       addOpenAnimation(element){
         setTimeout(() => {
           element.style.setProperty('--transform-value','0%')
-        }, 1000);
+        }, 300);
       }
       toggleLoadingState(button, spinner, isLoading) {
         if (isLoading) {
