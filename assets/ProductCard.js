@@ -26,9 +26,9 @@ if (!customElements.get("product-card")) {
           if (template) {
             this.appendTemplateContent(template);
             document.body.classList.add("overflow-hidden");
-            this.addCloseDrawerTriggers(document.querySelector(`.quick-view-product`))
             this.updateBorders(document.querySelector(`.quick-view-product`));
             this.addOpenAnimation(document.querySelector(`.quick-view-drawer`));
+            this.addCloseDrawerTriggers(document.querySelector(`.quick-view-product`))
             // this.initializeDrawer();
           }
         } catch (error) {
@@ -57,13 +57,15 @@ if (!customElements.get("product-card")) {
       addCloseDrawerTriggers(element){
         const xClose = element.querySelector(".quick-view-drawer__close");
         const overlay = element.querySelector(".quick-view-product__overlay");
+        console.log(xClose)
+        console.log(overlay)
         [xClose,overlay].forEach((el) => {
           el.addEventListener('click',(e) =>{
             e.preventDefault();
             e.stopPropagation();
             element.querySelector(".quick-view-drawer").style.setProperty('--transform-value','0%');
             setTimeout(() => {
-              document.removeChild(element);
+              document.body.removeChild(element);
             }, 500);
           })
         })
