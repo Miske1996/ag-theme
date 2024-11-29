@@ -57,16 +57,12 @@ if (!customElements.get("product-card")) {
       addCloseDrawerTriggers(element){
         const xClose = element.querySelector(".quick-view-drawer__close");
         const overlay = element.querySelector(".quick-view-product__overlay");
-        console.log(xClose)
-        console.log(overlay)
         [xClose,overlay].forEach((el) => {
-          el.addEventListener('click',(e) =>{
-            e.preventDefault();
-            e.stopPropagation();
+          el.addEventListener('click',() =>{
             element.querySelector(".quick-view-drawer").style.setProperty('--transform-value','0%');
             setTimeout(() => {
-              document.body.removeChild(element);
-            }, 500);
+              element.remove();
+            }, 1000);
           })
         })
       }
