@@ -52,6 +52,7 @@ if (!customElements.get("product-card")) {
       addOpenAnimation(element){
         setTimeout(() => {
           element.style.setProperty('--transform-value','0%')
+          element.parentElement.querySelector(".quick-view-product__overlay").style.setProperty('--opacity','1');
         }, 1000);
       }
       addCloseDrawerTriggers(element){
@@ -60,6 +61,7 @@ if (!customElements.get("product-card")) {
         [xClose,overlay].forEach((el) => {
           el.addEventListener('click',() =>{
             element.querySelector(".quick-view-drawer").style.setProperty('--transform-value','100%');
+            overlay.style.setProperty('--opacity','0');
             setTimeout(() => {
               element.remove();
               document.body.classList.remove("overflow-hidden");
@@ -96,7 +98,6 @@ if (!customElements.get("product-card")) {
       // Function to update label borders
        updateBorders(element) {
         const radioInputs = element.querySelectorAll('input');
-        console.log(radioInputs)
         // Iterate through all radio inputs
         const updateLabel = () => {
           radioInputs.forEach((input) => {

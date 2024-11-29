@@ -16,6 +16,7 @@
     background-color: #00000080;
     z-index: -1;
     cursor: pointer;
+    opacity: var(--opacity);
 }
 .quick-view-drawer{
     display: flex;
@@ -29,7 +30,7 @@
     position: relative;
     overflow-y: auto;
     overflow-x: unset;
-    transform: translateX(var(--transform-value));
+    transform: translateX(var(--transform-value,100%));
     transition: all 0.3s cubic-bezier(0.33, 0, 0.2, 1);
 }
 .quick-view-drawer__header{

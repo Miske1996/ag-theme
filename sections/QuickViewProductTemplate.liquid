@@ -1,7 +1,7 @@
 <template id="QuickViewProduct-{{ product.id }}">
   {{ 'QuickViewProductTemplate.css' | asset_url | stylesheet_tag }}
   <div class="quick-view-product">
-    <div class="quick-view-product__overlay"></div>
+    <div class="quick-view-product__overlay" style="--opacity:0"></div>
     <div class="quick-view-drawer" style="--transform-value: 100%">
       <div class="quick-view-drawer__header">
         <button class="quick-view-drawer__close">
