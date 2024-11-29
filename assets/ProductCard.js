@@ -52,14 +52,14 @@ if (!customElements.get("product-card")) {
       addOpenAnimation(element){
         setTimeout(() => {
           element.style.setProperty('--transform-value','0%')
-        }, 300);
+        }, 1000);
       }
       addCloseDrawerTriggers(element){
         const xClose = element.querySelector(".quick-view-drawer__close");
         const overlay = element.querySelector(".quick-view-product__overlay");
         [xClose,overlay].forEach((el) => {
           el.addEventListener('click',() =>{
-            element.querySelector(".quick-view-drawer").style.setProperty('--transform-value','0%');
+            element.querySelector(".quick-view-drawer").style.setProperty('--transform-value','100%');
             setTimeout(() => {
               element.remove();
             }, 1000);
