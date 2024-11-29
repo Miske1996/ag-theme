@@ -62,6 +62,8 @@ if (!customElements.get("product-card")) {
             element.querySelector(".quick-view-drawer").style.setProperty('--transform-value','100%');
             setTimeout(() => {
               element.remove();
+              document.body.classList.remove("overflow-hidden");
+
             }, 1000);
           })
         })
