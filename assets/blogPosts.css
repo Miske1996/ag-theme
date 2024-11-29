@@ -4,6 +4,7 @@
     gap: 50px;
     padding: 0 40px 80px 40px;
     background-color: #fff;
+    width: 100vw;
 }
 .blog-posts__header{
     width: 100%;

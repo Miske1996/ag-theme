@@ -1,5 +1,5 @@
 .infinite-text-scroll {
-    width: 100%;
+    width: 100vw;
     height: 50px;
     background-color: #111;
     overflow: hidden;

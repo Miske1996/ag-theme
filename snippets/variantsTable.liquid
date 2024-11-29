@@ -1,0 +1,97 @@
+{% comment %}
+  product
+{% endcomment %}
+{{ 'variantsTable.css' | asset_url | stylesheet_tag }}
+<div class="variants-table">
+  <div class="variants-table__header">
+    <div class="variants-table__header-col-variant">
+      <span>Variant</span>
+    </div>
+    <div class="variants-table__header-col-quantity">
+      <span>Quantity</span>
+      <svg
+        width="15"
+        height="15"
+        aria-hidden="false"
+        aria-label="icon info"
+      >
+        <use xlink:href="#icon-info"></use>
+      </svg>
+    </div>
+    <div class="variants-table__header-col-price ">
+      <span>Price</span>
+    </div>
+    <div class="variants-table__header-col-discount ">
+      <span>Discount</span>
+    </div>
+    <div class="variants-table__header-col-total">
+      <span>Total</span>
+    </div>
+  </div>
+  <div class="variants-table__seperator"></div>
+  {% for variant in product.variants %}
+    <div class="variants-table__row">
+      <div class="variants-table__product-info">
+        <div class="variants-table__product-image">
+          {{
+            product.featured_image
+            | image_url: width: 100
+            | image_tag: class: 'variants-table__image image--contain'
+          }}
+        </div>
+        <div class="variants-table__content">
+          <span class="variants-table__option">{{ variant.options[0].name }}</span>
+        </div>
+      </div>
+      <div class="variants-table__quantity">
+        <div class="variants-table__qte">
+          <button class="variants-table__minus js-qte-minus">
+            <svg
+              width="14"
+              height="15"
+              aria-hidden="false"
+              aria-label="minus quantity"
+            >
+              <use xlink:href="#icon-minus"></use>
+            </svg>
+          </button>
+          <input class="variants-table__input js-qte-input" value="1" placeholder="1">
+          <button class="variants-table__plus js-qte-plus">
+            <svg
+              width="14"
+              height="15"
+              aria-hidden="false"
+              aria-label="plus quantity"
+            >
+              <use xlink:href="#icon-plus"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="variants-table__price">
+        <span> {{ variant.price | money }} / Each </span>
+      </div>
+      <div class="variants-table__discount">
+        <span> 0% </span>
+      </div>
+      <div class="variants-table__total">
+        <span>
+          {{ variant.price | money }}
+        </span>
+      </div>
+    </div>
+  {% endfor %}
+  <div class="variants-table__seperator"></div>
+  <div class="variants-table__footer">
+    <button class="variants-table__footer-atc">View Cart</button>
+    <div class="variants-table__footer-total-items">
+      <span class="variants-table__items-total-footer">1</span>
+      <span class="variants-table__items-footer-text">Total Items</span>
+    </div>
+    <div class="variants-table__footer-total-amount">
+      <span class="variants-table__footer-total-price">{{ product.price | money }}</span>
+      <span class="variants-table__footer-total-price-text">Product Subtotal</span>
+      <span class="variants-table__footer-total-tax">Taxes & shipping calculated at checkout</span>
+    </div>
+  </div>
+</div>

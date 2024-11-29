@@ -1,0 +1,132 @@
+<template id="QuickViewProduct-{{ product.id }}">
+  {{ 'QuickViewProductTemplate.css' | asset_url | stylesheet_tag }}
+  <div class="quick-view-product">
+    <div class="quick-view-product__overlay"></div>
+    <div class="quick-view-drawer" style="--transform-value: 100%">
+      <div class="quick-view-drawer__header">
+        <button class="quick-view-drawer__close">
+          <svg
+            class="quick-view-drawer__close-icon"
+            width="15"
+            height="15"
+            aria-hidden="false"
+            aria-label="close drawer"
+          >
+            <use xlink:href="#icon-close-drawer"></use>
+          </svg>
+        </button>
+        {{
+          product.featured_image
+          | image_url: width: 700
+          | image_tag: class: 'quick-view-drawer__featured-image image--contain'
+        }}
+      </div>
+      <div class="quick-view-drawer__body">
+        <div class="quick-view-drawer__title">
+          <h3 class="quick-view-drawer__h3">{{ product.title }}</h3>
+          <h4 class="quick-view-drawer__h4">{{ product.metafields.custom.subtitle }}</h4>
+        </div>
+        <div class="quick-view-drawer__product-info">
+          <div class="quick-view-drawer__tags">
+            {% for tag in product.tags %}
+              <div class="quick-view-drawer__tag">
+                <div class="quick-view-drawer__tag-bullet"></div>
+                <span class="quick-view-drawer__tag-text">{{ tag }}</span>
+              </div>
+            {% endfor %}
+          </div>
+          <div class="quick-view-drawer__stars">
+            <svg width="12" height="12" aria-hidden="false">
+              <use xlink:href="#icon-star-review-product"></use>
+            </svg>
+            <svg width="12" height="12" aria-hidden="false">
+              <use xlink:href="#icon-star-review-product"></use>
+            </svg>
+            <svg width="12" height="12" aria-hidden="false">
+              <use xlink:href="#icon-star-review-product"></use>
+            </svg>
+            <svg width="12" height="12" aria-hidden="false">
+              <use xlink:href="#icon-star-review-product"></use>
+            </svg>
+            <svg width="12" height="12" aria-hidden="false">
+              <use xlink:href="#icon-star-review-product"></use>
+            </svg>
+          </div>
+        </div>
+        {% render 'variantsTable' %}
+        <div class="quick-view-drawer__subscriptions">
+          <label for="subscription-Drawer-1-{{ product.id }}-{{ section.id }}" class="quick-view-drawer__subscription">
+            <input
+              class="quick-view-drawer__input-radio"
+              id="subscription-Drawer-1-{{ product.id }}-{{ section.id }}"
+              type="radio"
+              name="subscription-Drawer-{{ product.id }}-{{ section.id }}"
+              checked="true"
+            >
+            <div class="quick-view-drawer__custom-radio">
+              <div class="quick-view-drawer__inner-circle"></div>
+            </div>
+            <div class="quick-view-drawer__subscription-details">
+              <span class="quick-view-drawer__subscription-text">One-Time Purchase</span>
+              <span class="quick-view-drawer__subscription-price">{{ product.price | money }}</span>
+              <button class="quick-view-drawer__subscription-date" aria-label="dropdown">
+                <span class="quick-view-drawer__subscription-date-text">Delivery Every 2 Months</span>
+                <svg width="16" height="16" aria-hidden="false">
+                  <use xlink:href="#icon-dropdown"></use>
+                </svg>
+              </button>
+            </div>
+          </label>
+          <label for="subscription-Drawer-2-{{ product.id }}-{{ section.id }}" class="quick-view-drawer__subscription">
+            <input
+              class="quick-view-drawer__input-radio"
+              id="subscription-Drawer-2-{{ product.id }}-{{ section.id }}"
+              type="radio"
+              name="subscription-Drawer-{{ product.id }}-{{ section.id }}"
+            >
+            <div class="quick-view-drawer__custom-radio">
+              <div class="quick-view-drawer__inner-circle"></div>
+            </div>
+            <div class="quick-view-drawer__subscription-details">
+              <span class="quick-view-drawer__subscription-text">One-Time Purchase</span>
+              <span class="quick-view-drawer__subscription-price">{{ product.price | money }}</span>
+              <button class="quick-view-drawer__subscription-date" aria-label="dropdown">
+                <span class="quick-view-drawer__subscription-date-text">Delivery Every 3 Months</span>
+                <svg width="16" height="16" aria-hidden="false">
+                  <use xlink:href="#icon-dropdown"></use>
+                </svg>
+              </button>
+            </div>
+          </label>
+        </div>
+        <div class="quick-view-drawer__atc">
+          <div class="quick-view-drawer__footer-quantity">
+            <button class="quick-view-drawer__footer-minus js-qte-minus">
+              <svg
+                width="14"
+                height="15"
+                aria-hidden="false"
+                aria-label="minus quantity"
+              >
+                <use xlink:href="#icon-minus"></use>
+              </svg>
+            </button>
+            <input class="quick-view-drawer__footer-input js-qte-input" value="1" placeholder="1">
+            <button class="quick-view-drawer__footer-plus js-qte-plus">
+              <svg
+                width="14"
+                height="15"
+                aria-hidden="false"
+                aria-label="plus quantity"
+              >
+                <use xlink:href="#icon-plus"></use>
+              </svg>
+            </button>
+          </div>
+          <span class="quick-view-drawer__footer-total">Add to Cart  -  {{ product.first_available_variant.price | money }}</span>
+        </div>
+        <a class="quick-view-drawer__footer-link" href="#">View Full Details</a>
+      </div>
+    </div>
+  </div>
+</template>

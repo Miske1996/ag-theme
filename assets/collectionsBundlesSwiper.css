@@ -1,5 +1,5 @@
 .collection-bundles-swiper{
-    width: 100%;
+    width: 100vw;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -81,4 +81,10 @@
 }
 .collection-bundles-swiper .product-card{
     background-color: #F6F6F5;
+}
+.collection-bundles-swiper .product-card__menu {
+    background-color: #F6F6F5;
+}
+.collection-bundles-swiper .product-card__subscription{
+    background-color: #fff;
 }

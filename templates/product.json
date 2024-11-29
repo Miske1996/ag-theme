@@ -1,10 +1,10 @@
 {
   "sections": {
-    "main":{
-      "type": "section-tmp"
+    "QuickViewProductTemplate":{
+      "type": "QuickViewProductTemplate"
     }
   },
   "order": [
-   "main"
+   "QuickViewProductTemplate"
   ]
 }

@@ -16,6 +16,10 @@ button{
 a{
     text-decoration: none;
 }
+input{
+  background: none;
+  border: none;
+}
 input:focus{
     outline: none;
 }
@@ -47,3 +51,37 @@ input:focus{
     font-weight: 500 ;
     cursor: pointer; 
 }
+.button.loading {
+    color: transparent;
+    position: relative;
+  }
+  
+  @media screen and (forced-colors: active) {
+    .button.loading {
+      color: rgb(var(--color-foreground));
+    }
+  }
+  
+.overflow-hidden{
+    overflow: hidden;
+}
+.hidden {
+    display: none !important;
+  }
+  .button.loading > .loading__spinner {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .button.loading > .loading__spinner .spinner {
+    width: fit-content;
+  }
+  
+  .button.loading > .loading__spinner .path {
+    stroke: #fff;
+  }  
