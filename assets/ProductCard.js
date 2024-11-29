@@ -57,10 +57,11 @@ if (!customElements.get("product-card")) {
       addCloseDrawerTriggers(element){
         const xClose = element.querySelector(".quick-view-drawer__close");
         const overlay = element.querySelector(".quick-view-product__overlay");
-        const drawer = element.querySelector(".quick-view-drawer")
         [xClose,overlay].forEach((el) => {
-          el.addEventListener('click',() =>{
-            drawer.style.setProperty('--transform-value','0%');
+          el.addEventListener('click',(e) =>{
+            e.preventDefault();
+            e.stopPropagation();
+            element.querySelector(".quick-view-drawer").style.setProperty('--transform-value','0%');
             setTimeout(() => {
               document.removeChild(element);
             }, 500);
