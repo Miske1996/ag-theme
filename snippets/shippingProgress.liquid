@@ -1,13 +1,11 @@
 {{ 'shippingProgress.css' | asset_url | stylesheet_tag}}
-{% assign threshold = 1000 %}
+{% assign threshold = 100000 %}
 {% assign cart_total = cart.total_price %}
 {% assign percentage = cart_total | divided_by: threshold %}
 {% assign threshold = threshold %}
 {% assign remaining = threshold | minus: cart_total %}
 <div class="shipping-progress">
     <span class="shipping-progress__text">
-        {{ cart_total }}
-        {{ threshold }}
         {% if cart_total == 0 %}
             {%- comment -%} No message if the cart is empty {%- endcomment -%}
           {% elsif cart_total < threshold %}
