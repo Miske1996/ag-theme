@@ -34,7 +34,8 @@
     display: flex;
 }
 .shipping-progress__bar-inner{
-    width: 30%;
     height: 100%;
     background-color: #000000;
+    width: 0%;
+    transition: width .1s ease;
 }

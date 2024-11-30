@@ -17,7 +17,7 @@
             bubbles: true,
             detail: {
               id: this.getAttribute("data-variant-id"),
-              qty: display.value - amount,
+              qty: display.value - 1,
             },
           });
           this.dispatchEvent(eventQty);
@@ -25,7 +25,7 @@
           const eventQty = new CustomEvent("changeQuantity", {
             bubbles: true,
             detail: {
-              id: this.getAttribute("data-variant-key"),
+              id: this.getAttribute("data-variant-id"),
               qty: display.value,
             },
           });
@@ -55,8 +55,8 @@
 
       display.addEventListener("change", () => {
         const amount = parseInt(display.value, 10);
-        if (display.value < 1) {
-          display.value = 1;
+        if (display.value < 0) {
+          display.value = 0;
           minus.disabled = true;
         }
         if (display.value > 1) {

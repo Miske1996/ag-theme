@@ -4,29 +4,43 @@ if (!customElements.get("cart-drawer")) {
       this.cartInitOpen();
       this.cartInitClose();
       this.initQuantityChanges();
+      this.initShippingProgress();
     }
 
     disconnectedCallback() {}
-
+    initShippingProgress() {
+        this.previousPercentage = this.querySelector('.shipping-progress__bar-inner').getAttribute('percentage');
+        this.updateProgressBarShipping();
+    }
+    updateProgressBarShipping(){
+        const shippingAmountBar = this.querySelector('.shipping-progress__bar-inner');
+        // Force a reflow by reading offsetHeight
+        shippingAmountBar.style.width = this.previousPercentage + '%';
+        // Apply the width after forcing reflow
+        requestAnimationFrame(() => {
+        shippingAmountBar.style.width = shippingAmountBar.getAttribute('data-width');
+        });
+        this.previousPercentage = shippingAmountBar.getAttribute('percentage');
+    }
     initQuantityChanges() {
       this.addEventListener("changeQuantityPlus", (e) => {
         this.querySelector(".cart-items").classList.add("cart-items--loading");
-        this.updateCartCard({
-          id: e.detail.id,
-          quantity: e.detail.qty,
-        }).finally(() => {
+        const idItem = e.detail.id
+        const updates = {};
+        updates[idItem] = e.detail.qty;
+        this.updateCartValue(updates).finally(() => {
           this.querySelector(".cart-items").classList.remove(
             "cart-items--loading"
           );
         });
       });
       this.addEventListener("changeQuantity", (e) => {
-        console.log(formData);
         this.querySelector(".cart-items").classList.add("cart-items--loading");
-        this.updateCartCard({
-          id: e.detail.id,
-          quantity: e.detail.qty,
-        }).finally(() => {
+        const idItem = e.detail.id
+        const updates = {};
+        updates[idItem] = e.detail.qty;
+
+        this.updateCartValue(updates).finally(() => {
           this.querySelector(".cart-items").classList.remove(
             "cart-items--loading"
           );
@@ -65,6 +79,7 @@ if (!customElements.get("cart-drawer")) {
         console.log(error);
       }
     }
+
     async updateCartCard(object) {
       const formData = {
         items: [object],
@@ -94,6 +109,32 @@ if (!customElements.get("cart-drawer")) {
         console.log(error);
       }
     }
+
+    async updateCartValue(updates) {
+        try {
+          const response = await fetch(
+            `${window.Shopify.routes.root}cart/update.js?sections=cart,header`,
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ updates }),
+            }
+          );
+          const responseJson = await response.json();
+  
+          if (!response.ok) {
+            throw {
+              message: responseJson.message,
+              status: responseJson.status,
+            };
+          }
+          this.updateUI(responseJson.sections);
+        } catch (error) {
+          console.log(error);
+        }
+      }
     updateUI(sections) {
       const htmlHeader = new DOMParser().parseFromString(
         sections.header,
