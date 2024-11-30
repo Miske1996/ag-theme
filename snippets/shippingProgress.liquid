@@ -6,6 +6,8 @@
 {% assign remaining = threshold | minus: cart_total %}
 <div class="shipping-progress">
     <span class="shipping-progress__text">
+        {{ cart_total }}
+        {{ threshold }}
         {% if cart_total == 0 %}
             {%- comment -%} No message if the cart is empty {%- endcomment -%}
           {% elsif cart_total < threshold %}
