@@ -1,11 +1,11 @@
 .loading__spinner {
     position: absolute;
     z-index: 1;
-    width: 1.8rem;
+    width: 20px;
   }
   
   .loading__spinner {
-    width: 1.8rem;
+    width: 20px;
     display: inline-block;
   }
   

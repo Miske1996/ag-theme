@@ -1,0 +1,13 @@
+{{ 'shippingProgress.css' | asset_url | stylesheet_tag}}
+<div class="shipping-progress">
+    <span class="shipping-progress__text">
+        You are <span class="shipping-progress__remaining">$45.44</span> away from eligible for free shipping
+    </span>
+    <div class="shipping-progress__bar-container">
+        <span class="shipping-progress__min">0$</span>
+        <div class="shipping-progress__bar">
+            <div class="shipping-progress__bar-inner"></div>
+        </div>
+        <span class="shipping-progress__max">$80</span>
+    </div>
+</div>

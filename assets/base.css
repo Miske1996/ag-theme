@@ -77,7 +77,10 @@ input:focus{
     display: flex;
     align-items: center;
   }
-  
+  .button.loading{
+    opacity: 0.5;
+    pointer-events: none
+  }
   .button.loading > .loading__spinner .spinner {
     width: fit-content;
   }

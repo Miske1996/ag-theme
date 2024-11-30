@@ -90,3 +90,6 @@
     width: 30px;
     height: 30px;
 }
+.header__addToCart{
+    cursor: pointer;
+}

@@ -1,0 +1,109 @@
+.cart-items{
+    width: 100%;
+    display: flex;
+    padding: 0 30px;
+}
+.cart-items--loading{
+    opacity: 0.6;
+    pointer-events: none;
+}
+.cart-items__wrapper{
+    width: 100%;
+    background-color: #F6F6F5;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.cart-item{
+    width: 100%;
+    display: flex;
+    padding: 16px;
+    align-items: center;
+    gap: 16px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+.cart-item__image-wrapper{
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cart-item__image{
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+.cart-item__content{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.cart-item__info{
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+.cart-item__title{
+    font-size: 14px;
+    font-weight: 500;
+    color:#1B1F23 ;
+}
+.cart-item__price{
+    font-size: 14px;
+    font-weight: 500;
+    color:#1B1F23 ;
+}
+.cart-item__quantity-container{
+    display: flex;
+    height: 34px;
+    justify-content: space-between;
+}
+.cart-item__qte{
+    height: 100%;
+    width: 86px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #00000033;
+    border-radius: 6px;
+    display: flex;
+    background-color: #fff;
+    gap: 18px;
+    align-items: center;
+}
+
+.cart-item__minus,.cart-item__plus{
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    display: flex;
+}
+.cart-item__minus svg,.cart-item__plus svg{
+    width: 10px;
+    height: 10px;
+}
+.cart-item__input{
+    font-size: 12px;
+    font-weight: 400;
+    color: #1B1F23CC;
+    width: fit-content;
+    max-width: 10px;
+    text-align: center;
+}
+.cart-item__cta{
+    cursor: pointer;
+    display: flex;
+    padding: 10px 16px;
+    border: 1px dotted #00000033;
+    gap: 8px;
+    border-radius: 6px;
+}
+.cart-item__cta-text{
+    font-size: 12px;
+    font-weight: 400;
+    color: #1B1F23B2;
+}

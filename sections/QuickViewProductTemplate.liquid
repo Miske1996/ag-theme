@@ -1,6 +1,6 @@
 <template id="QuickViewProduct-{{ product.id }}">
   {{ 'QuickViewProductTemplate.css' | asset_url | stylesheet_tag }}
-  <div class="quick-view-product">
+  <quick-view-product class="quick-view-product" default-variant-id="{{ product.selected_or_first_available_variant.id }}">
     <div class="quick-view-product__overlay" style="--opacity:0"></div>
     <div class="quick-view-drawer" style="--transform-value: 100%">
       <div class="quick-view-drawer__header">
@@ -100,7 +100,7 @@
           </label>
         </div>
         <div class="quick-view-drawer__atc">
-          <div class="quick-view-drawer__footer-quantity">
+          <quantity-selector class="quick-view-drawer__footer-quantity">
             <button class="quick-view-drawer__footer-minus js-qte-minus">
               <svg
                 width="14"
@@ -122,11 +122,13 @@
                 <use xlink:href="#icon-plus"></use>
               </svg>
             </button>
-          </div>
-          <span class="quick-view-drawer__footer-total">Add to Cart  -  {{ product.first_available_variant.price | money }}</span>
+          </quantity-selector>
+          <span class="quick-view-drawer__footer-total"
+            >Add to Cart - {{ product.first_available_variant.price | money -}}
+          </span>
         </div>
         <a class="quick-view-drawer__footer-link" href="#">View Full Details</a>
       </div>
     </div>
-  </div>
+  </quick-view-product>
 </template>

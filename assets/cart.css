@@ -1,0 +1,123 @@
+.cart-drawer{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    visibility: hidden;
+}
+.cart-drawer__overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    background-color: #00000080;
+    z-index: -1;
+    cursor: pointer;
+    opacity: var(--opacity);
+}
+.cart-drawer__main{
+    margin-left: auto;
+    height: 100%;
+    width: 580px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(var(--transform-value,100%));
+    transition: all 0.3s cubic-bezier(0.33, 0, 0.2, 1);
+    overflow-y: auto;
+    overflow-x: unset;
+}
+.cart-drawer__header{
+    display: flex;
+    width: 100%;
+    height: 90px;
+    border-bottom: 1px solid #0000001A;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 36px;
+    justify-content: space-between;
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #fff;
+}
+.cart-drawer__header-title{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+.cart-drawer__header-h2{
+    font-weight: 500;
+    font-size: 34px;
+    color: #1B1F23;
+}
+.cart-drawer__header-total-items{
+    width: 36px;
+    height: 36px;
+    background-color: #1B1F23;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:18px ;
+    font-weight: 400;
+    color: #fff;
+}
+.cart-drawer__close{
+    width: 15px;
+    height: 15px;
+    display: flex;
+    cursor: pointer;
+}
+.cart-drawer__footer{
+    width: 100%;
+    padding: 34px 30px;
+    border-top: 2px solid #0000001A;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    gap: 28px;
+    position: sticky;
+    bottom: 0;
+    background: #fff;
+    z-index: 100;
+}
+.cart-drawer__footer-content{
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+.cart-drawer__footer-text{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.cart-draawer__footer-h5{
+    font-size: 20px;
+    font-weight: 500;
+    color: #1B1F23;
+}
+.cart-draawer__footer-h6{
+    font-size: 14px;
+    font-weight: 400;
+    color: #1B1F2399;
+}
+.cart-drawer__footer-total{
+    font-size: 24px;
+    font-weight: 600;
+    color: #1B1F23;
+}
+.cart-drawer__checkout{
+    width: 100%;
+    height: 61px;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 600;
+}

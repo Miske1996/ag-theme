@@ -2,7 +2,12 @@
   product,
   class
 {% endcomment %}
-<product-video-card class="{{ class }}">
+<product-card class="product-video-card__wrapper {{ class }}" data-section="{{ section.id }}">
+  <script type="application/json" id="p-data">
+    {
+      "data": {{ product | json }}
+    }
+  </script>
 <li class="product-video-card">
   <div class="product-video-card__video-container">
     {% for media in product.media %}
@@ -20,11 +25,12 @@
       <span class="product-video-card__title">{{ product.title }}</span>
       <span class="product-video-card__price">{{ product.price | money }}</span>
     </div>
-    <span class="product-video-card__quick-add">
+    <span class="button product-video-card__quick-add js-atc">
       <svg width="32" height="32" aria-hidden="false">
         <use xlink:href="#icon-quick-add"></use>
       </svg>
+      {%- render 'loadingSpinner' -%}
     </span>
   </button>
 </li>
-</product-video-card>
+</product-card>

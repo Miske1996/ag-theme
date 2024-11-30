@@ -1,0 +1,41 @@
+{{ 'cartSuggestions.css' | asset_url | stylesheet_tag }}
+<cart-suggestions>
+    <div class="cart-suggestions">
+        <div class="cart-suggestions__header">
+            <h4 class="cart-suggestions__title">Enhance Your Performance</h4>
+            <div class="cart-suggestions__navigation">
+                <button class="cart-suggestions__swiper-button-prev swiper-button-prev" aria-label="Previous slide">
+                    <svg width="40" height="40" aria-hidden="false">
+                        <use xlink:href="#icon-arrow-left"></use>
+                    </svg>
+                </button>
+                <button class="cart-suggestions__swiper-button-next swiper-button-next" aria-label="Next slide">
+                    <svg width="40" height="40" aria-hidden="false">
+                        <use xlink:href="#icon-arrow-right"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="cart-suggestions__wrapper swiper">
+            <div class="cart-suggestions__swiper swiper-wrapper">
+                {% for product in collections["cognitive-function"].products %}
+                    <div class="cart-card swiper-slide" variant-id="{{ product.selected_or_first_available_variant.id }}">
+                        <img src="{{ product.featured_image | image_url }}" class="cart-card__image image--contain" width="" height="">
+                        <span class="cart-card__title">{{ product.title }}</span>
+                        <div class="cart-card__footer">
+                            <span class="cart-card__price">
+                                {{ product.price | money }}
+                            </span>
+                            <button class="button cart-card__atc">
+                                Add to Cart 
+                            <span>+</span>
+                            {%- render 'loadingSpinner' -%}
+                        </button>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</cart-suggestions>
+<script src="{{ "cartSuggestions.js" | asset_url  }}" defer></script>

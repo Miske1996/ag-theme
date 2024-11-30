@@ -44,29 +44,33 @@
         </div>
       </div>
       <div class="variants-table__quantity">
-        <div class="variants-table__qte">
-          <button class="variants-table__minus js-qte-minus">
-            <svg
-              width="14"
-              height="15"
-              aria-hidden="false"
-              aria-label="minus quantity"
-            >
-              <use xlink:href="#icon-minus"></use>
-            </svg>
-          </button>
-          <input class="variants-table__input js-qte-input" value="1" placeholder="1">
-          <button class="variants-table__plus js-qte-plus">
-            <svg
-              width="14"
-              height="15"
-              aria-hidden="false"
-              aria-label="plus quantity"
-            >
-              <use xlink:href="#icon-plus"></use>
-            </svg>
-          </button>
-        </div>
+        <quantity-selector
+            data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+        >
+            <div class="variants-table__qte">
+            <button class="variants-table__minus js-qte-minus">
+                <svg
+                width="14"
+                height="15"
+                aria-hidden="false"
+                aria-label="minus quantity"
+                >
+                <use xlink:href="#icon-minus"></use>
+                </svg>
+            </button>
+            <input class="variants-table__input js-qte-input" value="1" placeholder="1">
+            <button class="variants-table__plus js-qte-plus">
+                <svg
+                width="14"
+                height="15"
+                aria-hidden="false"
+                aria-label="plus quantity"
+                >
+                <use xlink:href="#icon-plus"></use>
+                </svg>
+            </button>
+            </div>
+        </quantity-selector>
       </div>
       <div class="variants-table__price">
         <span> {{ variant.price | money }} / Each </span>

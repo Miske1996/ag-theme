@@ -1,0 +1,41 @@
+{{ 'cart.css' | asset_url | stylesheet_tag }}
+<cart-drawer>
+    <div class="cart-drawer">
+        <div class="cart-drawer__overlay js-close-cart" style="--opacity:0"></div>
+        <div class="cart-drawer__main" style="--transform-value: 100%">
+            <div class="cart-drawer__header">
+                <div class="cart-drawer__header-title">
+                    <div class="cart-drawer__header-h2">
+                        Your Bag
+                    </div>
+                    <span class="cart-drawer__header-total-items">{{ cart.item_count }}</span>
+                </div>
+                <button class="cart-drawer__close js-close-cart">
+                    <svg
+                    class="cart-drawer__close-icon"
+                    width="15"
+                    height="15"
+                    aria-hidden="false"
+                    aria-label="close drawer"
+                    >
+                    <use xlink:href="#icon-close-drawer"></use>
+                    </svg>
+                </button>
+            </div>
+        {% render 'shippingProgress' %}
+        {% render 'cartItems' %}
+        {% render 'cartSuggestions' %}
+            <div class="cart-drawer__footer">
+                <div class="cart-drawer__footer-content">
+                    <div class="cart-drawer__footer-text">
+                        <h5 class="cart-draawer__footer-h5">Subtotal</h5>
+                        <h6 class="cart-draawer__footer-h6">Tax included. Shipping calculated at checkout.</h6>
+                    </div>
+                    <span class="cart-drawer__footer-total">{{ cart.total_price | money }}</span>
+                </div>
+                <button class="button--primary  cart-drawer__checkout">Checkout</button>
+            </div>
+        </div>
+    </div>
+</cart-drawer>
+<script src="{{ 'cart.js' | asset_url }}" defer></script>

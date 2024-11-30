@@ -1,0 +1,40 @@
+.shipping-progress{
+    width: 100%;
+    padding: 26px 30px 22px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+.shipping-progress__text{
+    width: 100%;
+    text-align: center;
+    font-size: 16px ;
+    font-weight: 400;
+    color: #1B1F23;
+}
+.shipping-progress__remaining{
+    font-weight: 500;
+}
+.shipping-progress__bar-container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 16px;
+}
+.shipping-progress__min,.shipping-progress__max{
+    font-weight: 400;
+    font-size: 14px;
+    color: #1B1F23;
+}
+.shipping-progress__bar{
+    flex: 1;
+    height: 3px;
+    background-color: #00000029;
+    display: flex;
+}
+.shipping-progress__bar-inner{
+    width: 30%;
+    height: 100%;
+    background-color: #000000;
+}

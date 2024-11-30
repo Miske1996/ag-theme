@@ -12,7 +12,7 @@ if (!customElements.get("product-card")) {
       
 
       handleQuickAddButton(){
-        const QuickAddButton = this.querySelector('.product-card__quick-atc');
+        const QuickAddButton = this.querySelector('.js-atc');
         const loadingSpinner = QuickAddButton.querySelector('.loading__spinner');
         QuickAddButton.addEventListener('click', () => this.handleQuickAddClick(QuickAddButton, loadingSpinner));
       }
@@ -82,18 +82,20 @@ if (!customElements.get("product-card")) {
       openProductQuickAdd(){
         const openSource = this.querySelector(".product-card__link");
         this.productMenu = this.querySelector(".product-card__menu");
-        openSource.addEventListener('click',(e)=>{
-          if(e.target !== this.productMenu && !this.productMenu.classList.contains("product-card__menu--open")){
-            this.productMenu.classList.add('product-card__menu--open');
-          }else if(!this.productMenu.contains(e.target) && this.productMenu.classList.contains("product-card__menu--open")){
-            this.productMenu.classList.remove('product-card__menu--open');
-          }
-        })
-        openSource.addEventListener('mouseleave',()=>{
-          if(this.productMenu.classList.contains("product-card__menu--open")){
-            this.productMenu.classList.remove('product-card__menu--open');
-          }
-        })
+        if(openSource){
+          openSource.addEventListener('click',(e)=>{
+            if(e.target !== this.productMenu && !this.productMenu.classList.contains("product-card__menu--open")){
+              this.productMenu.classList.add('product-card__menu--open');
+            }else if(!this.productMenu.contains(e.target) && this.productMenu.classList.contains("product-card__menu--open")){
+              this.productMenu.classList.remove('product-card__menu--open');
+            }
+          })
+          openSource.addEventListener('mouseleave',()=>{
+            if(this.productMenu.classList.contains("product-card__menu--open")){
+              this.productMenu.classList.remove('product-card__menu--open');
+            }
+          })
+        }
       }
       // Function to update label borders
        updateBorders(element) {

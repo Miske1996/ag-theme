@@ -1,0 +1,56 @@
+{{ 'cartItems.css' | asset_url | stylesheet_tag }}
+<div class="cart-items">
+  <div class="cart-items__wrapper">
+    {% for item in cart.items %}
+        <div class="cart-item">
+        <div class="cart-item__image-wrapper">
+            <img class="cart-item__image" src="{{ item.product.featured_image | image_url }}" width="" height="">
+        </div>
+        <div class="cart-item__content">
+            <div class="cart-item__info">
+            <h5 class="cart-item__title">{{ item.product.title }}</h5>
+            <span class="cart-item__price">{{ item.original_price | money }}</span>
+            </div>
+            <div class="cart-item__quantity-container">
+            <quantity-selector
+                data-variant-id="{{ item.variant.id }}" class="cart-item__qte">
+                <button class="cart-item__minus js-qte-minus">
+                <svg
+                    width="14"
+                    height="15"
+                    aria-hidden="false"
+                    aria-label="minus quantity"
+                >
+                    <use xlink:href="#icon-minus"></use>
+                </svg>
+                </button>
+                <input class="cart-item__input js-qte-input" value="{{ item.quantity }}" placeholder="1">
+                <button class="cart-item__plus js-qte-plus">
+                <svg
+                    width="14"
+                    height="15"
+                    aria-hidden="false"
+                    aria-label="plus quantity"
+                >
+                    <use xlink:href="#icon-plus"></use>
+                </svg>
+                </button>
+            </quantity-selector>
+            <div class="cart-item__cta">
+                <svg
+                width="14"
+                height="14"
+                aria-hidden="false"
+                aria-label="save"
+                class="cart-item__return-icon"
+                >
+                <use xlink:href="#icon-return"></use>
+                </svg>
+                <span class="cart-item__cta-text">Subscribe & Save 10%</span>
+            </div>
+            </div>
+        </div>
+        </div>
+    {% endfor %}
+  </div>
+</div>

@@ -20,6 +20,7 @@ if (!customElements.get("collection-videos-swiper")) {
             prevEl: ".collection-videos-swiper__swiper-button-prev",
           },
         });
+        console.log(this.swiper)
       }
   
       // Destroy the swiper instance if it exists

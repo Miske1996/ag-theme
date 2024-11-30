@@ -1,4 +1,4 @@
-product-video-card{
+.product-video-card__wrapper{
     display: flex;
     width: fit-content !important;
     height: fit-content !important;
