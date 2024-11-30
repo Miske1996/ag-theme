@@ -4,24 +4,10 @@ if (!customElements.get("cart-drawer")) {
       this.cartInitOpen();
       this.cartInitClose();
       this.initQuantityChanges();
-      this.initShippingProgress();
     }
 
     disconnectedCallback() {}
-    initShippingProgress() {
-        this.previousPercentage = this.querySelector('.shipping-progress__bar-inner').getAttribute('percentage');
-        this.updateProgressBarShipping();
-    }
-    updateProgressBarShipping(){
-        const shippingAmountBar = this.querySelector('.shipping-progress__bar-inner');
-        // Force a reflow by reading offsetHeight
-        shippingAmountBar.style.width = this.previousPercentage + '%';
-        // Apply the width after forcing reflow
-        requestAnimationFrame(() => {
-        shippingAmountBar.style.width = shippingAmountBar.getAttribute('data-width');
-        });
-        this.previousPercentage = shippingAmountBar.getAttribute('percentage');
-    }
+
     initQuantityChanges() {
       this.addEventListener("changeQuantityPlus", (e) => {
         this.querySelector(".cart-items").classList.add("cart-items--loading");
