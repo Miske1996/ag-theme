@@ -1,5 +1,5 @@
 {{ 'shippingProgress.css' | asset_url | stylesheet_tag}}
-{% assign threshold = 80 %}
+{% assign threshold = 1000 %}
 {% assign cart_total = cart.total_price %}
 {% assign percentage = cart_total | divided_by: threshold %}
 {% assign threshold = threshold %}
@@ -18,9 +18,9 @@
     <div class="shipping-progress__bar-container">
         <span class="shipping-progress__min">0$</span>
         <div class="shipping-progress__bar">
-            <div class="shipping-progress__bar-inner" data-width="calc(min(100,{{ percentage }})*1%)"
+            <div class="shipping-progress__bar-inner" style="--width:calc(min(100,{{ percentage }})*1%)" data-width="calc(min(100,{{ percentage }})*1%)"
                 percentage="{{ percentage }}" ></div>
         </div>
-        <span class="shipping-progress__max">$80</span>
+        <span class="shipping-progress__max">${{ threshold }}</span>
     </div>
 </div>

@@ -28,6 +28,7 @@ if (!customElements.get("cart-drawer")) {
         const idItem = e.detail.id
         const updates = {};
         updates[idItem] = e.detail.qty;
+        console.log(updates)
         this.updateCartValue(updates).finally(() => {
           this.querySelector(".cart-items").classList.remove(
             "cart-items--loading"
@@ -39,7 +40,7 @@ if (!customElements.get("cart-drawer")) {
         const idItem = e.detail.id
         const updates = {};
         updates[idItem] = e.detail.qty;
-
+        console.log(updates)
         this.updateCartValue(updates).finally(() => {
           this.querySelector(".cart-items").classList.remove(
             "cart-items--loading"
@@ -151,6 +152,8 @@ if (!customElements.get("cart-drawer")) {
         htmlCart.querySelector(".cart-drawer__header-total-items").innerHTML;
       document.querySelector(".cart-items__wrapper").innerHTML =
         htmlCart.querySelector(".cart-items__wrapper").innerHTML;
+      document.querySelector(".shipping-progress__text").innerHTML =  htmlCart.querySelector(".shipping-progress__text").innerHTML;
+      document.querySelector(".shipping-progress__bar-inner").style.setProperty("--width",htmlCart.querySelector(".shipping-progress__bar-inner").style.getPropertyValue('--width'))
     }
     cartInitOpen() {
       const triggers = document.querySelectorAll(".js-open-cart");

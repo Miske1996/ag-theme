@@ -17,7 +17,7 @@
             bubbles: true,
             detail: {
               id: this.getAttribute("data-variant-id"),
-              qty: display.value - 1,
+              qty: display.value,
             },
           });
           this.dispatchEvent(eventQty);
